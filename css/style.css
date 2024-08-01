@@ -1,3 +1,8 @@
+/*  Что по-хорошему нужно сделать
+    1. Есть слишком длинные наименования классов
+    2. Нужно больше переиспользования, универсальные стили, в частности кнопки с желтой полосой
+    3. Есть неиспользуемые классы*/
+
 @font-face {
   font-family: "Rubik";
   font-weight: 400;
@@ -19,19 +24,15 @@
   font-display: swap;
 }
 
-.visually-hidden {
-  display: none;
+/* ОБНУЛЕНИЕ */
+
+* {
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 li {
@@ -48,46 +49,185 @@ a {
   color: black;
 }
 
-.page-header {
+/* ОБЩИЕ СТИЛИ */
+
+.visually-hidden {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1160px;
+}
+
+/* HEADER */
+
+.header {
+  height: 226px;
+  position: relative;
+}
+
+.header__background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 186px;
+  background-color: #ffe17f;
+  z-index: -1;
+}
+
+.header__content {
+  /* box-sizing: border-box; */
+  padding: 0 60px;
+  /* margin: 0 60px; */
   width: 1160px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  margin-top: 18px;
-  padding: 0 60px;
-  /* background-color: blueviolet; */
 }
 
-.logo {
+.header__logo {
   width: 145px;
+  margin-top: 17px;
   margin-bottom: 30px;
 }
 
-.navigation-login {
+.header__nav-section {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.navigation-list {
+.header__nav-items {
   display: flex;
   font-family: "Rubik", sans-serif;
-  background-color: aqua;
+  align-items: center;
+}
+
+.search-form {
+  border: solid 2px;
+  border-radius: 50px;
+  width: 520px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 16px;
+}
+
+.search-form__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form__text {
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: black;
+  background-color: transparent;
+}
+
+.search-form__text::placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 0.3;
+}
+
+.search-form__text:focus {
+  outline: none;
+}
+
+.search-form__button {
+  padding: 0 56px;
+  height: 100%;
+  border: none;
+  border-left: solid 2px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header__login-icon {
+  margin-left: 27px;
+}
+
+.header__login-button {
+  margin-left: 12px;
+}
+
+.header__compare-icon {
+  margin-right: 9px;
+}
+
+.header__compare-button {
+  margin-right: 36px;
+}
+
+.header__cart-icon {
+  margin-right: 12px;
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.catalog-icon {
+  margin-left: 22px;
 }
 
 .nav-catalog-services {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
-  /* align-items: center; */
-}
+  align-items: center;
+  /* margin-bottom: 30px; */
+/* } */
 
-.navigation-services {
+/* .navigation-services {
   display: flex;
-  /* align-items: center; */
-  /* align-content: center; */
   text-transform: uppercase;
+  width: 471px;
+  justify-content: space-between;
 }
 
 .navigation-link {
@@ -95,32 +235,124 @@ a {
   align-items: center;
 }
 
-main {
+.services-link {
+  letter-spacing: 5px;
+} */
+
+/* Контент */
+
+/* main {
   width: 1160px;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.promo-item {
+/* Промо товар */
+
+/* .promo-item {
   display: flex;
+  justify-content: space-between;
 }
 
 .gallery {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 560px;
+}
+
+.slider-image {
+  width: 100%;
+}
+
+.slider-arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+}
+
+.slider-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 .arrow-right {
   transform: scaleX(-1);
 }
 
+.promo-advantages {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
 .advantages-title {
   font-size: 50px;
   font-weight: 800;
+  margin: 0 0 29px;
 }
 
 .advantages-description {
   font-family: "Rubik", sans-serif;
+  line-height: 30px;
+  margin: 0 0 51px;
+}
+
+.promo-navigation {
+  display: flex;
+  height: 40px;
+  margin-bottom: 49px;
+  /* align-items: center; */
+/* justify-content: space-between;
+  letter-spacing: 5px;
+} */
+
+/* .text-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+} */
+
+/* .text-link-decoration {
+  position: absolute;
+  height: 8px;
+  background-color: #ffe17f;
+  height: 8px;
+  width: 220px;
+  z-index: -1;
+}
+
+.text-link {
+  margin: auto;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 76px;
+}
+
+.slider-pagination-item {
+  display: flex;
+  align-items: center;
+}
+
+.slider-pagination-button {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slider-pagination-button-current {
+  background-color: black;
 }
 
 .text-link {
@@ -130,28 +362,208 @@ main {
   font-size: 18px;
 }
 
+.promo-features {
+  display: flex;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
 .feature-title {
   font-size: 36px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+  margin-bottom: 12px;
 }
 
 .feature-description {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+  margin-bottom: 38px;
+} */
+
+/* Категории товаров */
+
+/* .categories-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: #ffe17f;
+  margin-bottom: 33px;
+}
+
+.monopode {
+  align-self: end;
 }
 
 .categories-name {
   font-weight: 800;
+  font-size: 18px;
+  letter-spacing: calc(18px * -0.02);
+} */
+
+/* Сопутствующие услуги */
+
+/* .services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 70px;
 }
 
-.unique-deliveri-service {
+.services-pagination {
+  display: flex;
+  flex-direction: column;
+  width: 287px;
+  height: 319px;
+  margin: 0;
+  padding: 65px 0;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-right: 7px solid black;
+}
+
+.services-description {
+  display: flex;
+  width: 694px;
+  margin-right: 63px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-title {
+  width: 450px;
+}
+
+.advantages-title {
+  margin-bottom: 34px;
+}
+
+.text-link-inner {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.services-pagination-button {
+  border: none;
+  background-color: transparent;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.services-pagination-button-current {
+  color: #ffe17f;
+  background-color: black;
+}
+
+.services-pagination .text-link-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+}
+
+.services-pagination-item-current {
+  background-color: black;
+}
+
+.services-pagination-item .text-link-decoration {
+  width: 160px;
+} */
+
+/* Уникальная доп услуга */
+
+/* .unique-list {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  margin-bottom: 70px;
+}
+
+.unique-item-pic {
+  display: flex;
+  width: 125px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe17f;
+}
+
+.unique-delivery-icon {
+  display: flex;
+  width: 125px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.unique-delivery-service {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 3px;
+} */
+
+/* О нас, контакты */
+
+/* .about-contacs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.about,
+.contacts {
+  width: 530px;
+}
+
+.line {
+  width: 84px;
+  height: 7px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+.about-contacs .advantages-title {
+  margin-bottom: 48px;
+}
+
+.about-contacs .advantages-description {
+  margin-bottom: 30px;
+}
+
+.deliverys-list {
+  list-style: circle;
+  margin-bottom: 30px;
+}
+
+.deliverys-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.dot {
+  background-color: #ffe17f;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 26px;
 }
 
 .deliveryman {
@@ -159,24 +571,217 @@ main {
   letter-spacing: -1px;
 }
 
+.about .text-link {
+  letter-spacing: calc(18px * 0.2);
+}
+
+.about .text-link-container {
+  width: 270px;
+}
+
+.about .text-link-decoration {
+  width: 270px;
+}
+
 .store-name {
+  display: block;
+  margin-bottom: 15px;
   font-size: 24px;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
 }
 
+.advantages-description-adress {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  line-height: 30px;
+}
+
 .contacts-phone {
+  display: block;
+  margin-bottom: 30px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   text-decoration: underline;
 }
 
 .work-time {
+  display: block;
   font-family: "Rubik", sans-serif;
   font-size: 24px;
+  margin-bottom: 15px;
 }
 
-.white-font {
+.contacts-schedule-item {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  line-height: 30px;
+}
+
+.contacts-schedule-item:last-child {
+  margin: 0 0 30px;
+}
+
+.contacts .text-link-container {
+  width: 259px;
+}
+
+.contacts .text-link-decoration {
+  width: 259px;
+} */
+
+/* Подпишись */
+
+/* .subscribe {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 56px;
+  background: #f0f0f0;
+}
+
+.subscribe-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 144px;
+}
+
+.subscribe-description .advantages-title {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 7px;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+.subscribe-description .advantages-description {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 30px;
+  padding-right: 25px;
+  margin-bottom: 0;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-email-form {
+  height: 57px;
+  display: flex;
+  align-items: end;
+}
+
+.field {
+  box-sizing: border-box;
+  padding-left: 17px;
+  width: 557px;
+  height: 100%;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  border: none;
+  border-bottom: solid 3px #c4c4c4;
+  background-color: transparent;
+}
+
+.newsletter-button {
+  width: 253px;
+  height: 100%;
+  border: solid 3px #c4c4c4;
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.news-for-free-mark {
+  margin-right: 17px;
+} */
+
+/* Подвал */
+
+/* .page-footer {
+  background-color: #444444;
+  padding: 61px 0;
+}
+
+.info-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item .advantages-description {
+  width: 236px;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+.footer-services-list {
+  display: flex;
+  width: 444px;
+  justify-content: space-between;
+}
+
+.footer-services-link {
+  color: white;
+}
+
+.info-item-tel {
+  width: 236px;
+  text-align: right;
+}
+
+.tel {
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.contacts-phone {
+  display: inline-block;
+  color: white;
+}
+
+.links-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-item {
+  display: flex;
+  align-items: center;
+}
+
+.links-item .line {
+  background-color: #ffc500;
+  width: 80px;
+  margin: 0;
+  margin-right: 35px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.socials-item {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* ----- */
+
+/* .white-font {
   font-size: 16px;
 }
 
@@ -184,4 +789,4 @@ main {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
-}
+} */
