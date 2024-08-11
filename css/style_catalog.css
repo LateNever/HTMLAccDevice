@@ -19,14 +19,23 @@
   font-display: swap;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   display: none;
 }
 
 body {
+  display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ul {
@@ -43,84 +52,324 @@ a {
   color: black;
 }
 
+.page-header {
+  width: 1160px;
+  /* background-color: #aaaaaa; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-content {
+  width: 1040px;
+  display: grid;
+}
+
+.logo {
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
 .navigation-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 517px 231px 241px;
+  gap: 25.5px;
+  padding: 0;
+  height: 40px;
+}
+
+.navigation-item-search {
+  /* display: grid; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: #ffe17f;
+}
+
+.search-form {
+  display: grid;
+  width: 517px;
+  grid-template-columns: 48px 311px 1fr;
+}
+
+.search-form label {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-row {
+  border: none;
   font-family: "Rubik", sans-serif;
-}
-
-.navigation-services {
-  text-transform: uppercase;
-}
-
-.advantages-title {
-  font-size: 50px;
-  font-weight: 800;
-}
-
-.advantages-description {
-  font-family: "Rubik", sans-serif;
-}
-
-.text-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-.feature-title {
-  font-size: 36px;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-}
-
-.feature-description {
-  font-size: 18px;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-}
-
-.categories-name {
-  font-weight: 800;
-}
-
-.unique-deliveri-service {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 20px;
-  letter-spacing: 3px;
-}
-
-.deliveryman {
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-.store-name {
-  font-size: 24px;
-  font-family: "Rubik", sans-serif;
-  font-weight: 700;
-}
-
-.contacts-phone {
-  font-family: "Rubik", sans-serif;
-  font-size: 18px;
-  text-decoration: underline;
-}
-
-.work-time {
-  font-family: "Rubik", sans-serif;
-  font-size: 24px;
-}
-
-.white-font {
   font-size: 16px;
+  color: black;
+  background-color: transparent;
+}
+
+.search-row::placeholder {
+  font-size: 16px;
+  color: black;
+  border: none;
+}
+
+.search-row:focus {
+  outline: none;
+}
+
+.search-button {
+  /* margin: 0 56px; */
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  border-left: solid 2px;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation-item-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.login-icon {
+  margin-right: 9px;
+}
+
+.unlogin-button {
+  opacity: 0.3;
+}
+
+.navigation-list-catalog {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 243px 50px 1fr 157px 157px 157px;
+  margin-top: 30px;
+  margin-bottom: 58px;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-title {
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.navigation-item-delivery {
+  justify-content: start;
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.navigation-item-guarantee {
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.navigation-item-contacts {
+  justify-content: end;
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.main-inner {
+  width: 1160px;
+}
+
+.inner-header-title {
+  margin-bottom: 16px;
+}
+
+.inner-header {
+  margin-left: 60px;
+  margin-bottom: 35px;
+}
+
+.breadcrumbs {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.bread_arrow {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.catalog-products {
+  display: flex;
+  width: 200px;
+  margin-left: 60px;
+}
+
+.catalog-products {
+  background-color: #ffe17f;
+  width: 100%;
+}
+
+.filter {
+  width: 200px;
+  margin-right: 60px;
+}
+
+.filter-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  padding-bottom: 60px;
+  border-bottom: solid 2px black;
+  margin-bottom: 12px;
+  letter-spacing: calc(18px * 0.2);
+}
+
+.catalog-filter-price {
+  border-bottom: solid 2px black;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  align-items: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 40px;
+  background-color: white;
+  padding: 70px 40px 44px;
+}
+
+.pagination-show-more {
+  width: 760px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+  background-color: transparent;
+  border: solid 3px #e5e5e5;
+  height: 55px;
+  margin-bottom: 44px;
+}
+
+.pagination {
+  display: flex;
+  width: 760px;
+  height: 71px;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: calc(18px * 0.2);
+  background-color: #ebebeb;
+  padding: 25px;
+  margin-bottom: 78px;
+}
+
+.pagination-numbers {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  font-family: "Rubik", sans-serif;
+  color: #444444;
+  opacity: 0.3;
+}
+
+/* Подвал */
+
+.page-footer {
+  background-color: #444444;
+  padding: 61px 0;
+  width: 1440px;
+  padding-left: 141px;
+  padding-right: 140px;
+}
+
+.info-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item .advantages-description {
+  width: 236px;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+.footer-services-list {
+  display: flex;
+  width: 444px;
+  justify-content: space-between;
+  /* font-family: "Rubik", sans-serif; */
 }
 
 .footer-services-link {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  color: white;
 }
 
-/* ____________________________ */
+.info-item-tel {
+  width: 236px;
+  text-align: right;
+}
+
+.tel {
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.contacts-phone {
+  display: inline-block;
+  color: white;
+}
+
+.links-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-item {
+  display: flex;
+  align-items: center;
+}
+
+.links-item .line {
+  background-color: #ffc500;
+  width: 80px;
+  margin: 0;
+  margin-right: 35px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.socials-item {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
