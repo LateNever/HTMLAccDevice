@@ -15,16 +15,15 @@
 
     <!-- Нужно добавить ссылки на сущ страницы и заглушить не сущ ссылки -->
     <!-- HEADER -->
+
     <header class="section">
       <div class="header container">
         <div class="header__background"></div>
         <div class="header__content">
           <h1 class="visually-hidden">Магазин device</h1>
-          <img
-            src="img/device_logo.svg"
-            alt="Логотип магазиина device"
-            class="header__logo"
-          />
+          <a href="index.html" class="header__logo logo">
+            <img src="img/device_logo.svg" alt="Логотип магазиина device" />
+          </a>
           <div class="header__nav-section">
             <ul class="header__nav-items">
               <li>
@@ -33,45 +32,45 @@
                   method="post"
                   class="search-form"
                 >
-                  <div class="search-form__input">
-                    <label for="search-text" class="search-form__label"
-                      ><img src="img/search.svg" alt="Иконка поиска"
-                    /></label>
+                  <div class="search-form__focus">
+                    <div class="search-form__input">
+                      <label for="search-text" class="search-form__label"
+                        ><img src="img/search.svg" alt="Иконка поиска"
+                      /></label>
+                      <input
+                        type="search"
+                        id="search-text"
+                        name="search-text"
+                        placeholder="Поиск по сайту"
+                        class="search-form__text"
+                      />
+                    </div>
+                  </div>
+                  <div class="search-form__focus">
                     <input
-                      type="search"
-                      id="search-text"
-                      name="search-text"
-                      placeholder="Поиск по сайту"
-                      class="search-form__text"
+                      type="submit"
+                      value="Найти"
+                      class="search-form__button"
                     />
                   </div>
-                  <input
-                    type="submit"
-                    value="Найти"
-                    class="search-form__button"
-                  />
                 </form>
               </li>
               <li>
-                <a href="" class="header__nav-link">
-                  <img
-                    src="img/login.svg"
-                    alt="Иконка пользоватля"
-                    class="header__login-icon"
-                  />
-                  <span class="header__login-button"> Войти </span>
+                <a href="#" class="header__nav-link header__login">
+                  <img src="img/login.svg" alt="Иконка пользоватля" />
+                  <span> Войти </span>
                 </a>
               </li>
             </ul>
             <ul class="header__nav-items">
               <li>
-                <a href="#">
+                <a href="#" class="header__nav-link header__compare">
                   <img
                     src="img/compare.svg"
                     alt="Иконка сравнения"
                     class="header__compare-icon"
                   />
-                  <span class="header__compare-button">Сравнить</span>
+                  <span>Сравнить</span>
                 </a>
               </li>
               <li>
@@ -92,7 +91,7 @@
           <div class="header__services">
             <ul class="header__catalog">
               <li>
-                <a href="catalog.html" class="header__nav-link">
+                <a href="catalog.html" class="header__nav-catalog">
                   <span>Каталог товаров</span>
                   <img
                     src="img/catalog.svg"
@@ -105,13 +104,13 @@
             <nav>
               <ul class="header__nav-services">
                 <li>
-                  <a href="#">Доставка</a>
+                  <a class="header__nav-link" href="#">Доставка</a>
                 </li>
                 <li>
-                  <a href="#">Гарантия</a>
+                  <a class="header__nav-link" href="#">Гарантия</a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a class="header__nav-link" href="#">
                     <span class="header__text-right"> Контакты </span>
                   </a>
                 </li>
@@ -124,7 +123,8 @@
 
     <!-- MAIN -->
     <main class="main">
-      <!-- ПРОМО ТОВАР -->
+      <!-- Промо товар -->
+
       <div class="container">
         <article class="promo">
           <div class="promo__background">
@@ -157,28 +157,37 @@
             </p>
             <ul class="promo__navigation">
               <li>
-                <div class="yellow-line">
-                  <a href="#" class="yellow-line___text">Подробнее</a>
+                <div class="yellow-line" tabindex="0">
+                  <a href="#" tabindex="-1">Подробнее</a>
                   <div class="yellow-line__decoration"></div>
                 </div>
               </li>
               <li>
                 <ol class="promo__pagination">
-                  <li class="promo__pagination-item">
+                  <li class="promo__pagination-item" tabindex="0">
                     <button
                       class="promo__pagination-button promo__pagination-button--current"
                       type="button"
+                      tabindex="-1"
                     >
                       <span class="visually-hidden">1 фото</span>
                     </button>
                   </li>
-                  <li class="promo__pagination-item">
-                    <button class="promo__pagination-button" type="button">
+                  <li class="promo__pagination-item" tabindex="0">
+                    <button
+                      class="promo__pagination-button"
+                      type="button"
+                      tabindex="-1"
+                    >
                       <span class="visually-hidden">2 фото</span>
                     </button>
                   </li>
-                  <li class="promo__pagination-item">
-                    <button class="promo__pagination-button" type="button">
+                  <li class="promo__pagination-item" tabindex="0">
+                    <button
+                      class="promo__pagination-button"
+                      type="button"
+                      tabindex="-1"
+                    >
                       <span class="visually-hidden">2 фото</span>
                     </button>
                   </li>
@@ -200,12 +209,12 @@
         </article>
       </div>
 
-      <!-- КАТЕГОРИИ ТОВАРОВ -->
+      <!-- Категории товаров -->
       <section class="categories">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
-          <li>
-            <div class="categories__item">
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/vr.svg"
                 alt="Пиктограмма категории товаров"
@@ -216,8 +225,8 @@
               реальность</span
             >
           </li>
-          <l>
-            <div class="categories__item">
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/monopods.svg"
                 alt="Пиктограмма категории товаров"
@@ -225,36 +234,36 @@
               />
             </div>
             <span class="categories__name">Моноподы <br />для селфи</span>
-          </l>
-          <l>
-            <div class="categories__item">
+          </li>
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/gopros.svg"
                 alt="Пиктограмма категории товаров"
               />
             </div>
             <span class="categories__name">Экшн-камеры</span>
-          </l>
-          <l>
-            <div class="categories__item">
+          </li>
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/mibands.svg"
                 alt="Пиктограмма категории товаров"
               />
             </div>
             <span class="categories__name">Фитнес-браслеты</span>
-          </l>
-          <l>
-            <div class="categories__item">
+          </li>
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/applewatches.svg"
                 alt="Пиктограмма категории товаров"
               />
             </div>
             <span class="categories__name">Умные часы</span>
-          </l>
-          <li>
-            <div class="categories__item">
+          </li>
+          <li class="categories__item" tabindex="0">
+            <div class="categories__img">
               <img
                 src="img/product_categories/drones.svg"
                 alt="Пиктограмма категории товаров"
@@ -264,251 +273,275 @@
           </li>
         </ul>
       </section>
-      <!-- СОПУТСТВУЮЩИЕ УСЛУГИ -->
+
+      <!-- Сопутствующие услуги -->
 
       <section class="services">
         <div class="services__background"></div>
-        <div class="container">
+        <div class="services__section container">
           <h2 class="visually-hidden">Дополнительные услуги</h2>
           <ol class="services__pagination">
             <li
-              class="services-pagination-item services-pagination-item-current text-link-container"
+              class="services__container--current services__container"
+              tabindex="0"
             >
-              <div class="text-link-inner">
+              <div class="services__item">
                 <button
-                  class="services-pagination-button services-pagination-button-current"
+                  class="services__button services__button--current yellow-line"
                   type="button"
+                  tabindex="-1"
                 >
-                  <span class="text-link">Доставка</span>
+                  <div class="yellow-line__decoration"></div>
+                  <span>Доставка</span>
                 </button>
               </div>
-              <div class="text-link-decoration"></div>
             </li>
-            <li class="services-pagination-item text-link-container">
-              <div class="text-link-inner">
-                <button class="services-pagination-button" type="button">
-                  <span class="text-link">Гарантия</span>
+
+            <li class="services__container" tabindex="0">
+              <div class="services__item">
+                <button
+                  class="services__button yellow-line"
+                  type="button"
+                  tabindex="-1"
+                >
+                  <div class="yellow-line__decoration"></div>
+                  <span>Гарантия</span>
                 </button>
               </div>
-              <div class="text-link-decoration"></div>
             </li>
-            <li class="services-pagination-item text-link-container">
-              <div class="text-link-inner">
-                <button class="services-pagination-button" type="button">
-                  <span class="text-link">Кредит</span>
+
+            <li class="services__container" tabindex="0">
+              <div class="services__item">
+                <button
+                  class="services__button yellow-line"
+                  type="button"
+                  tabindex="-1"
+                >
+                  <div class="yellow-line__decoration"></div>
+                  <span>Кредит</span>
                 </button>
               </div>
-              <div class="text-link-decoration"></div>
             </li>
           </ol>
-          <ul class="services-description">
-            <li class="services-title">
-              <h3 class="advantages-title">Доставка</h3>
-              <p class="advantages-description">
+          <ul class="services__content">
+            <li class="services__title">
+              <h3 class="services__advantages-title">Доставка</h3>
+              <p class="services__advantages-description">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                 совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
                 на ваш этаж.
               </p>
             </li>
-            <li class="services-pic">
+            <li>
               <img src="img/deliveryman.svg" alt="Пиктограмма услуги" />
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- <section class="unique-delivery">
-        <ul class="unique-list">
-          <li class="unique-item-pic">
-            <img
-              src="img/delivery.svg"
-              alt="Пиктограмма доставки"
-              class="unique-delivery-pic"
-            />
+      <!-- Уникальная доп услуга -->
+
+      <section>
+        <ul class="unique" tabindex="0">
+          <li class="unique__pic">
+            <img src="img/delivery.svg" alt="Пиктограмма доставки" />
           </li>
-          <li class="unique-item">
-            <h3 class="unique-delivery-service">
-              Доставим редкий товар под заказ
-            </h3>
+          <li>
+            <h3 class="unique__service">Доставим редкий товар под заказ</h3>
           </li>
-          <li class="unique-delivery-icon">
-            <img src="img/info.svg" alt="Иконка информации" class="info-icon" />
+          <li class="unique__icon">
+            <div class="unique__icon-circle">
+              <b class="unique__i">i</b>
+            </div>
+            <!-- <img src="img/info.svg" alt="Иконка информации" class="info-icon" /> -->
           </li>
         </ul>
-      </section> -->
-      <!-- <section class="about-contacs">
-        <div class="about">
+      </section>
+
+      <!-- О нас, контакты -->
+
+      <section class="about">
+        <div class="about__info">
           <h2 class="visually-hidden">Информация о магазине</h2>
-          <div class="line"></div>
-          <h3 class="advantages-title">О нас</h3>
-          <p class="advantages-description">
+          <div class="about__line"></div>
+          <h3 class="about__title">О нас</h3>
+          <p class="about__description">
             Огромный выбор гаджетов не оставит равнодушным гика, который есть в
             каждом из нас.
           </p>
-          <p class="advantages-description">
+          <p class="about__description">
             Мы можем доставить ваш товар в самые отдалённые уголки России
             транспортными компаниями:
           </p>
-          <ul class="deliverys-list">
-            <li class="deliverys-item">
-              <div class="dot"></div>
-              <span class="deliveryman"> Меловые линии </span>
+          <ul class="about__delivery">
+            <li class="about__delivery-item">
+              <div class="about__dot"></div>
+              <span class="about__delivery-name"> Меловые линии </span>
             </li>
-            <li class="deliverys-item">
-              <div class="dot"></div>
-              <span class="deliveryman"> СДИК </span>
+            <li class="about__delivery-item">
+              <div class="about__dot"></div>
+              <span class="about__delivery-name"> СДИК </span>
             </li>
-            <li class="deliverys-item">
-              <div class="dot"></div>
-              <span class="deliveryman"> ТаксБерри </span>
+            <li class="about__delivery-item">
+              <div class="about__dot"></div>
+              <span class="about__delivery-name"> ТаксБерри </span>
             </li>
           </ul>
-          <div class="text-link-container">
-            <a href="" class="text-link">Подробнее о нас</a>
-            <div class="text-link-decoration"></div>
+          <div class="yellow-line about__yellow-more" tabindex="0">
+            <div class="yellow-line__decoration"></div>
+            <a href="#" tabindex="-1">Подробнее о нас</a>
           </div>
         </div>
-        <div class="contacts">
-          <div class="line"></div>
-          <h3 class="advantages-title">Контакты</h3>
-          <p class="advantages-description">
+        <div class="about__info">
+          <div class="about__line"></div>
+          <h3 class="about__title">Контакты</h3>
+          <p class="about__description">
             Вы можете забрать товар сами, заехав в наш офис.<br />
             Заодно сможете проверить работоспособность покупки.
           </p>
-          <b class="store-name">Интернет-магазин «Девайс»</b>
-          <p class="advantages-description-adress">
+          <b class="about__subtitle">Интернет-магазин «Девайс»</b>
+          <p class="about__description about__description--nomargin">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
           </p>
-          <a class="contacts-phone" href="tel:88005558628"
+          <a class="about__description" href="tel:+78128121212"
             >+7 (812) 812-12-12</a
           >
-          <b class="work-time">Время работы</b>
-          <ul class="contacts-schedule">
-            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+          <b class="about__subtitle about__subtitle--margin-top"
+            >Время работы</b
+          >
+          <ul class="about__schedule">
+            <li class="about__description about__description--nomargin">
+              пн—пт: с 10:00 до 22:00
+            </li>
+            <li class="about__description">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <div class="text-link-container">
-            <a href="" class="text-link">Напишите нам</a>
-            <div class="text-link-decoration"></div>
+          <div class="yellow-line about__yellow-send" tabindex="0">
+            <div class="yellow-line__decoration"></div>
+            <a href="#" tabindex="-1">Напишите нам</a>
           </div>
         </div>
-      </section> -->
-      <!-- <section class="subscribe">
-        <ul class="subscribe-description">
-          <li class="advantages-title">Подпишитесь на рассылку</li>
-          <li class="advantages-description">
-            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
-            распаковками, а также акции, спецпредложения и вот это вот всё.
-          </li>
-        </ul>
-        <ul class="subscribe-form">
-          <li class="subscribe-email">
-            <form
-              class="subscribe-email-form"
-              action="https://echo.htmlacademy.ru/"
-              method="post"
-            >
-              <label class="visually-hidden" for="newsletter-email"
-                >Email</label
+      </section>
+
+      <!-- Подпишись -->
+
+      <section class="subscribe">
+        <div class="subscribe__container">
+          <ul class="subscribe__item">
+            <li class="subscribe__title">Подпишитесь на рассылку</li>
+            <li class="subscribe__description">
+              Еженедельный дайджест с обзорами новинок, длительными
+              тест-драйвами, распаковками, а также акции, спецпредложения и вот
+              это вот всё.
+            </li>
+          </ul>
+          <ul class="subscribe__form">
+            <li>
+              <form
+                class="subscribe__email"
+                action="https://echo.htmlacademy.ru/"
+                method="post"
               >
-              <input
-                class="field"
-                placeholder="Ваш e-mail"
-                type="email"
-                name="newsletter-email"
-                id="newsletter-email"
-                required
+                <label class="visually-hidden" for="newsletter-email"
+                  >Email</label
+                >
+                <input
+                  class="subscribe__field"
+                  placeholder="Ваш e-mail"
+                  type="email"
+                  name="newsletter-email"
+                  id="newsletter-email"
+                />
+                <button class="subscribe__button" type="submit">
+                  Подписаться
+                </button>
+              </form>
+            </li>
+            <li>
+              <img
+                src="img/check_mark.svg"
+                alt="Символ галочки"
+                class="subscribe__mark"
               />
-              <button class="button newsletter-button" type="submit">
-                Подписаться
-              </button>
-            </form>
-          </li>
-          <li class="news-for-free">
-            <img
-              src="img/check_mark.svg"
-              alt="Символ галочки"
-              class="news-for-free-mark"
-            />
-            <span class="advantages-description">Это бесплатно</span>
-          </li>
-        </ul>
-      </section> -->
+              <span class="subscribe__description">Это бесплатно</span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <!-- FOOTER -->
-    <!-- <footer class="page-footer">
-      <img
-        src="img/device_logo_yellow.svg"
-        alt="Логотип магазиина device, желтый"
-        class="logo yellow-logo"
-      />
-      <ul class="info-list">
-        <li class="info-item">
-          <p class="advantages-description white-font">
-            Санкт-Петербург, набережная реки Карповки, 5, литера П.
-          </p>
-        </li>
-        <li class="info-item">
-          <ul class="footer-services-list">
-            <li class="footer-services-item">
-              <a class="footer-services-link" href="">Доставка</a>
-            </li>
-            <li class="footer-services-item">
-              <a class="footer-services-link" href="">Гарантия</a>
-            </li>
-            <li class="footer-services-item">
-              <a class="footer-services-link" href="">Контакты</a>
-            </li>
-          </ul>
-        </li>
-        <li class="info-item-tel">
-          <span class="tel">Тел.:</span>
-          <a class="contacts-phone" href="tel:88005558628"
-            >+7 (812) 812-12-12</a
-          >
-        </li>
-      </ul>
-      <ul class="links-list">
-        <li class="links-item">
-          <div class="line"></div>
-        </li>
-        <li class="links-item">
-          <ul class="socials-list">
-            <li class="socials-item">
-              <a href="" class="social-link">
-                <img
-                  src="img/socials/nobook.svg"
-                  alt="Sadbook"
-                  class="social-logo"
-                />
-              </a>
-            </li>
-            <li class="socials-item">
-              <a href="" class="social-link">
-                <img
-                  src="img/socials/nogram.svg"
-                  alt="Sadgram"
-                  class="social-logo"
-                />
-              </a>
-            </li>
-            <li class="socials-item">
-              <a href="" class="social-link">
-                <img src="img/socials/noX.svg" alt="SadX" class="social-logo" />
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="links-item">
-          <a href="" class="html-link">
-            <img
-              src="img/HA_logo.svg"
-              alt="Логотип HTML Академии"
-              class="html-logo"
-          /></a>
-        </li>
-      </ul>
-    </footer> -->
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="index.html" class="footer__logo logo">
+          <img
+            src="img/device_logo_yellow.svg"
+            alt="Логотип магазиина device, желтый"
+          />
+        </a>
+
+        <ul class="footer__info-list">
+          <li class="footer__adress">
+            <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          </li>
+          <li class="footer__info-item">
+            <ul class="footer__services-list">
+              <li>
+                <a class="footer__services-link" href="">Доставка</a>
+              </li>
+              <li>
+                <a class="footer__services-link" href="">Гарантия</a>
+              </li>
+              <li>
+                <a class="footer__services-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__info-item">
+            <div class="footer__tel-container" tabindex="0">
+              <span class="footer__tel">Тел.: </span>
+              <a class="footer__phone" href="tel:88005558628" tabindex="-1"
+                >+7 (812) 812-12-12</a
+              >
+            </div>
+          </li>
+        </ul>
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <div class="footer__line"></div>
+          </li>
+          <li class="footer__links-item">
+            <ul class="footer__socials-list">
+              <li>
+                <a href="" class="footer__socials-item">
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nobook.svg" alt="Sadbook" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer__socials-item">
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nogram.svg" alt="Sadgram" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer__socials-item">
+                  <div class="footer__socials-container">
+                    <img src="img/socials/noX.svg" alt="SadX" />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer__links-item">
+            <a href="">
+              <img src="img/HA_logo.svg" alt="Логотип HTML Академии"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
