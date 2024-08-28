@@ -8,12 +8,11 @@
   <body>
     <!-- <p>
       Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
-      href="https://htmlacademy.ru/intensive/htmlcss"
-      >HTML и CSS. Профессиональная вёрстка сайтов</a
+        href="https://htmlacademy.ru/intensive/htmlcss"
+        >HTML и CSS. Профессиональная вёрстка сайтов</a
       >».
     </p> -->
 
-    <!-- Нужно добавить ссылки на сущ страницы и заглушить не сущ ссылки -->
     <!-- HEADER -->
 
     <header class="section">
@@ -32,7 +31,7 @@
                   method="post"
                   class="search-form"
                 >
-                  <div class="search-form__focus">
+                  <div class="search-form__focus" tabindex="0">
                     <div class="search-form__input">
                       <label for="search-text" class="search-form__label"
                         ><img src="img/search.svg" alt="Иконка поиска"
@@ -43,14 +42,16 @@
                         name="search-text"
                         placeholder="Поиск по сайту"
                         class="search-form__text"
+                        tabindex="-1"
                       />
                     </div>
                   </div>
-                  <div class="search-form__focus">
+                  <div class="search-form__focus" tabindex="0">
                     <input
                       type="submit"
                       value="Найти"
                       class="search-form__button"
+                      tabindex="-1"
                     />
                   </div>
                 </form>
@@ -73,7 +74,7 @@
                   <span>Сравнить</span>
                 </a>
               </li>
-              <li>
+              <li class="header__nav-cart">
                 <a href="#" class="header__nav-link">
                   <div class="header__cart-box">
                     <span class="header__cart-quantity">2</span>
@@ -85,6 +86,57 @@
                   />
                   <span>Корзина</span>
                 </a>
+                <div class="cart-popover">
+                  <img
+                    src="img/triangle.svg"
+                    alt=""
+                    class="cart-popover__triangle"
+                  />
+                  <ul class="cart-popover__items">
+                    <li class="cart-popover__item" tabindex="0">
+                      <img
+                        src="img/products/junior_selfie.jpg"
+                        alt="Фото товара"
+                        class="cart-popover__img"
+                      />
+                      <span class="cart-popover__item-name">
+                        Любительская селфи-палка
+                      </span>
+                      <button class="cart-popover__close-btn">
+                        <img src="img/close-btn-white.svg" alt="Закрыть" />
+                      </button>
+                    </li>
+                    <li class="cart-popover__item" tabindex="0">
+                      <img
+                        src="img/products/senior_selfie.jpg"
+                        alt="Фото товара"
+                        class="cart-popover__img"
+                      />
+                      <span class="cart-popover__item-name">
+                        Профессиональная селфи-палка
+                      </span>
+                      <button class="cart-popover__close-btn">
+                        <img src="img/close-btn-white.svg" alt="Закрыть" />
+                      </button>
+                    </li>
+                    <li class="cart-popover__total">
+                      <div class="cart-popover__quantity">
+                        <span>Товаров:</span>
+                        <span>2</span>
+                      </div>
+                      <div class="cart-popover__price">
+                        <span>Сумма:</span>
+                        <span>2000</span>
+                        <span>₽</span>
+                      </div>
+                    </li>
+                    <li class="cart-popover__open-cart">
+                      <button class="cart-popover__open-button">
+                        Открыть корзину
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -96,7 +148,12 @@
                   <img
                     src="img/catalog.svg"
                     alt="Иконка каталога товаров"
-                    class="header__catalog-icon"
+                    class="header__catalog-icon header__catalog-icon-closed"
+                  />
+                  <img
+                    src="img/catalog_opened.svg"
+                    alt="Иконка каталога товаров"
+                    class="header__catalog-icon header__catalog-icon-opened"
                   />
                 </a>
               </li>
@@ -117,6 +174,15 @@
               </ul>
             </nav>
           </div>
+        </div>
+        <div class="header__catalog-popover">
+          <a class="header__popover-link" href="#">Виртуальная реальность</a>
+          <a class="header__popover-link" href="#">Фитнес-браслеты</a>
+          <a class="header__popover-link" href="#">Квадрокоптеры</a>
+          <a class="header__popover-link" href="#">Моноподы для cелфи</a>
+          <a class="header__popover-link" href="#">Умные часы</a>
+          <a class="header__popover-link" href="#"></a>
+          <a class="header__popover-link" href="#">Экшн-камеры</a>
         </div>
       </div>
     </header>
@@ -353,7 +419,6 @@
             <div class="unique__icon-circle">
               <b class="unique__i">i</b>
             </div>
-            <!-- <img src="img/info.svg" alt="Иконка информации" class="info-icon" /> -->
           </li>
         </ul>
       </section>
@@ -486,13 +551,13 @@
           <li class="footer__info-item">
             <ul class="footer__services-list">
               <li>
-                <a class="footer__services-link" href="">Доставка</a>
+                <a class="footer__services-link" href="#">Доставка</a>
               </li>
               <li>
-                <a class="footer__services-link" href="">Гарантия</a>
+                <a class="footer__services-link" href="#">Гарантия</a>
               </li>
               <li>
-                <a class="footer__services-link" href="">Контакты</a>
+                <a class="footer__services-link" href="#">Контакты</a>
               </li>
             </ul>
           </li>
@@ -511,24 +576,30 @@
           </li>
           <li class="footer__links-item">
             <ul class="footer__socials-list">
-              <li>
-                <a href="" class="footer__socials-item">
-                  <div class="footer__socials-container">
-                    <img src="img/socials/nobook.svg" alt="Sadbook" />
+              <li class="footer__socials-li">
+                <a href="" tabindex="-1">
+                  <div class="footer__socials-item" tabindex="0">
+                    <div class="footer__socials-container">
+                      <img src="img/socials/nobook.svg" alt="Sadbook" />
+                    </div>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="" class="footer__socials-item">
-                  <div class="footer__socials-container">
-                    <img src="img/socials/nogram.svg" alt="Sadgram" />
+              <li class="footer__socials-li">
+                <a href="#" tabindex="-1">
+                  <div class="footer__socials-item" tabindex="0">
+                    <div class="footer__socials-container">
+                      <img src="img/socials/nogram.svg" alt="Sadgram" />
+                    </div>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="" class="footer__socials-item">
-                  <div class="footer__socials-container">
-                    <img src="img/socials/noX.svg" alt="SadX" />
+              <li class="footer__socials-li">
+                <a href="#" tabindex="-1">
+                  <div class="footer__socials-item" tabindex="0">
+                    <div class="footer__socials-container">
+                      <img src="img/socials/noX.svg" alt="SadX" />
+                    </div>
                   </div>
                 </a>
               </li>
@@ -536,12 +607,112 @@
           </li>
 
           <li class="footer__links-item">
-            <a href="">
+            <a class="footer__ha-logo" href="#">
               <img src="img/HA_logo.svg" alt="Логотип HTML Академии"
             /></a>
           </li>
         </ul>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__delivery">
+        <div class="modal__section">
+          <h2 class="modal__title">Доставка под заказ</h2>
+          <button class="modal__close-btn">
+            <img src="img/close-btn.svg" alt="Закрыть" />
+          </button>
+        </div>
+        <!-- Модальное окно -->
+        <form
+          class="modal__form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <div class="modal__section modal__section--bottom">
+            <p class="modal__field-group">
+              <label class="modal__field-label" for="delivery-name"
+                >Ваше имя:</label
+              >
+              <input
+                class="modal__field modal__field-name"
+                placeholder="Введите имя"
+                type="text"
+                name="delivery-name"
+                id="delivery-name"
+              />
+            </p>
+            <p class="modal__field-group">
+              <label class="modal__field-label" for="delivery-mail"
+                >Ваш e-mail:</label
+              >
+              <input
+                class="modal__field modal__field-mail"
+                placeholder="Введите e-mail:"
+                type="email"
+                name="delivery-mail"
+                id="delivery-mail"
+              />
+              <span class="modal__invalid-message">Забавный у вас адрес</span>
+            </p>
+          </div>
+          <div class="modal__section">
+            <p class="modal__field-group">
+              <label class="modal__field-label" for="delivery-item"
+                >Что нужно привезти:</label
+              >
+              <input
+                class="modal__field"
+                placeholder="В свободной форме"
+                type="text"
+                name="delivery-item"
+                id="delivery-item"
+              />
+            </p>
+            <div class="modal__field-group modal__group-counter">
+              <label
+                class="modal__field-label modal__field-label--info"
+                for="delivery-quantity"
+              >
+                Количество:
+                <div class="info-popover">
+                  <img
+                    src="img/triangle.svg"
+                    alt=""
+                    class="info-popover__triangle"
+                  />
+                  <p class="info-popover__content">
+                    Постараемся найти, сколько нужно. Привезём сколько получится
+                    по требованиям к провозу багажа.
+                  </p>
+                </div>
+              </label>
+
+              <div class="modal__counter">
+                <button type="button" class="modal__counter-button">−</button>
+
+                <input
+                  class="modal__field modal__field-counter"
+                  type="number"
+                  value="1"
+                  name="delivery-quantity"
+                  id="delivery-quantity"
+                />
+
+                <button type="button" class="modal__counter-button">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="modal__button" type="submit" tabindex="-1">
+            <div class="yellow-line yellow-line--w200" tabindex="0">
+              <span class="modal__button-send">Отправить</span>
+              <div
+                class="yellow-line__decoration yellow-line__decoration--modal"
+              ></div>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
