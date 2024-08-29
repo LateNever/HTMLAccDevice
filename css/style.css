@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 400;
-  src: url("../fonts/rubik/rubik-400.woff2");
+  src: url('../fonts/rubik/rubik-400.woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 700;
-  src: url("../fonts/rubik/rubik-700.woff2");
+  src: url('../fonts/rubik/rubik-700.woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-weight: 800;
-  src: url("../fonts/raleway/raleway-800.woff2");
+  src: url('../fonts/raleway/raleway-800.woff2');
   font-display: swap;
 }
 
@@ -57,7 +57,7 @@ a {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -111,7 +111,7 @@ body {
 
 .header__nav-items {
   display: flex;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   align-items: center;
 }
 
@@ -163,7 +163,7 @@ body {
 
 .search-form__text {
   border: none;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: black;
   background-color: transparent;
@@ -190,7 +190,7 @@ body {
   border: none;
   border-left: solid 2px;
   background-color: rgba(0, 0, 0, 0);
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   cursor: pointer;
   border: solid 2px;
@@ -322,7 +322,7 @@ body {
   height: 50px;
   border: none;
   background-color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: calc(18px * 0.2);
@@ -392,7 +392,7 @@ body {
   padding-top: 30px;
   padding-bottom: 60px;
   z-index: 10;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   display: none;
 }
@@ -446,7 +446,7 @@ main {
 
 .promo__number {
   font-size: 180px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
   text-align: start;
   color: white;
@@ -484,7 +484,7 @@ main {
   cursor: pointer;
 }
 
-.slider-button--right {
+.slider-button-right {
   transform: scaleX(-1);
 }
 
@@ -508,7 +508,7 @@ main {
 }
 
 .promo__description {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 30px;
   margin-top: 0;
   margin-bottom: 51px;
@@ -609,14 +609,14 @@ main {
 
 .promo__feature-title {
   font-size: 36px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   margin-bottom: 12px;
 }
 
 .promo__feature-description {
   font-size: 16px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: #444444;
 }
@@ -752,7 +752,7 @@ main {
 .services__button {
   border: none;
   background-color: transparent;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: calc(18px * 0.2);
@@ -782,7 +782,7 @@ main {
 }
 
 .services__advantages-description {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 30px;
   color: #444444;
 }
@@ -833,7 +833,7 @@ main {
 }
 
 .unique__service {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 20px;
@@ -885,7 +885,7 @@ main {
 
 .about__description {
   margin-bottom: 30px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 30px;
   color: #444444;
 }
@@ -920,14 +920,14 @@ main {
 .about__delivery-name {
   font-weight: 700;
   letter-spacing: -1px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .about__subtitle {
   display: block;
   margin-bottom: 15px;
   font-size: 24px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
 }
 
@@ -975,7 +975,7 @@ main {
 
 .subscribe__description {
   width: 560px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .subscribe__form {
@@ -997,7 +997,7 @@ main {
   width: 557px;
   height: 100%;
   font-size: 18px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   border: none;
   border-bottom: solid 3px #c4c4c4;
   background-color: transparent;
@@ -1021,7 +1021,7 @@ main {
   height: 100%;
   border: solid 3px #c4c4c4;
   background-color: transparent;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: calc(18px * 0.2);
@@ -1050,7 +1050,7 @@ main {
 }
 
 .subscribe__description {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* Подвал */
@@ -1086,12 +1086,12 @@ main {
   font-size: 16px;
   line-height: 20px;
   color: white;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .footer__info-item {
   color: white;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
 }
@@ -1141,13 +1141,13 @@ main {
 
 .footer__tel {
   display: inline-block;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: white;
 }
 
 .footer__phone {
   display: inline-block;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: white;
 }
 
@@ -1280,7 +1280,7 @@ main {
 }
 
 .modal__field-label {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
   line-height: 26px;
   margin-bottom: 14px;
@@ -1288,7 +1288,7 @@ main {
 }
 
 .modal__field-label--info::after {
-  content: "i";
+  content: 'i';
   display: inline-block;
   text-align: center;
   width: 26px;
@@ -1303,6 +1303,7 @@ main {
   position: absolute;
   display: flex;
   flex-direction: column;
+  top: 27px;
   left: -20px;
   z-index: 10;
   display: none;
@@ -1319,7 +1320,7 @@ main {
   color: #ffffff;
   background-color: #1a1a1a;
   padding: 20px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1329,7 +1330,7 @@ main {
   padding: 20px;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   border: none;
   background-color: #f0f0f0;
   background-repeat: no-repeat;
@@ -1348,7 +1349,7 @@ main {
   position: absolute;
   bottom: -17px;
   color: #ff3d3d;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -1423,10 +1424,14 @@ main {
   background-color: transparent;
 }
 
+.modal__button:focus {
+  outline: solid 2px #af4fff;
+}
+
 .modal__button-send {
   z-index: 10;
   font-weight: 800;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
 
