@@ -1,0 +1,33 @@
+/* ОБНУЛЕНИЕ */
+
+/* ОБЩИЕ СТИЛИ */
+
+/* HEADER */
+
+/* HEADER Псевдоклассы */
+
+/* MAIN */
+
+.yellow-line {
+  width: 220px;
+  height: 40px;
+}
+
+.yellow-line__button {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.yellow-line:hover .yellow-line__decoration {
+  height: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+/* Подвал */

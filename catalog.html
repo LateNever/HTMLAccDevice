@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: кталог</title>
-    <link rel="icon" href="/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_catalog.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Academy: Device</title>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="css/style_catalog.css" /> -->
+    <link rel="stylesheet" href="css/style copy.css" />
   </head>
   <body>
     <header class="section">
@@ -14,7 +15,7 @@
         <div class="header__content">
           <h1 class="visually-hidden">Магазин device</h1>
           <a href="index.html" class="header__logo logo">
-            <img src="img/device_logo.svg" alt="Логотип магазиина device">
+            <img src="img/device_logo.svg" alt="Логотип магазиина device" />
           </a>
           <div class="header__nav-section">
             <ul class="header__nav-items">
@@ -27,7 +28,7 @@
                   <div class="search-form__focus" tabindex="0">
                     <div class="search-form__input">
                       <label for="search-text" class="search-form__label">
-                        <img src="img/search.svg" alt="Иконка поиска">
+                        <img src="img/search.svg" alt="Иконка поиска" />
                       </label>
                       <input
                         type="search"
@@ -36,7 +37,7 @@
                         placeholder="Поиск по сайту"
                         class="search-form__text"
                         tabindex="-1"
-                     >
+                      />
                     </div>
                   </div>
                   <div class="search-form__focus" tabindex="0">
@@ -45,13 +46,13 @@
                       value="Найти"
                       class="search-form__button"
                       tabindex="-1"
-                   >
+                    />
                   </div>
                 </form>
               </li>
               <li>
                 <a href="#" class="header__nav-link header__login">
-                  <img src="img/login.svg" alt="Иконка пользоватля">
+                  <img src="img/login.svg" alt="Иконка пользоватля" />
                   <span>Войти</span>
                 </a>
               </li>
@@ -63,7 +64,7 @@
                     src="img/compare.svg"
                     alt="Иконка сравнения"
                     class="header__compare-icon"
-                 >
+                  />
                   <span>Сравнить</span>
                 </a>
               </li>
@@ -76,7 +77,7 @@
                     src="img/cart.svg"
                     alt="Иконка крзины"
                     class="header__cart-icon"
-                 >
+                  />
                   <span>Корзина</span>
                 </a>
                 <div class="cart-popover">
@@ -84,7 +85,7 @@
                     src="img/triangle.svg"
                     alt="Декоративный треугольник"
                     class="cart-popover__triangle"
-                 >
+                  />
                   <ul class="cart-popover__items">
                     <li class="cart-popover__frame">
                       <div class="cart-popover__item" tabindex="0">
@@ -92,12 +93,12 @@
                           src="img/products/junior_selfie.jpg"
                           alt="Фото товара"
                           class="cart-popover__img"
-                       >
+                        />
                         <span class="cart-popover__item-name">
                           Любительская селфи-палка
                         </span>
                         <button class="cart-popover__close-btn">
-                          <img src="img/close-btn-white.svg" alt="Закрыть">
+                          <img src="img/close_btn_white.svg" alt="Закрыть" />
                         </button>
                       </div>
                     </li>
@@ -107,12 +108,12 @@
                           src="img/products/senior_selfie.jpg"
                           alt="Фото товара"
                           class="cart-popover__img"
-                       >
+                        />
                         <span class="cart-popover__item-name">
                           Профессиональная селфи-палка
                         </span>
                         <button class="cart-popover__close-btn">
-                          <img src="img/close-btn-white.svg" alt="Закрыть">
+                          <img src="img/close_btn_white.svg" alt="Закрыть" />
                         </button>
                       </div>
                     </li>
@@ -146,12 +147,12 @@
                     src="img/catalog.svg"
                     alt="Иконка каталога товаров"
                     class="header__catalog-icon header__catalog-icon-closed"
-                 >
+                  />
                   <img
                     src="img/catalog_opened.svg"
                     alt="Иконка каталога товаров"
                     class="header__catalog-icon header__catalog-icon-opened"
-                 >
+                  />
                 </a>
               </li>
             </ul>
@@ -184,6 +185,7 @@
       </div>
     </header>
     <!-- MAIN -->
+
     <main>
       <h2 class="visually-hidden">Каталог товаров с фильтрацией</h2>
       <div class="section">
@@ -196,7 +198,7 @@
                 src="img/arrow.svg"
                 alt="Стрелка"
                 class="main__bread-arrow"
-             >
+              />
             </li>
             <li class="main__breadcrumb">
               <a href="#">Каталог товаров</a>
@@ -204,7 +206,7 @@
                 src="img/arrow.svg"
                 alt="Стрелка"
                 class="main__bread-arrow"
-             >
+              />
             </li>
             <li class="main__breadcrumb">
               <a href="#">Моноподы для селфи</a>
@@ -235,7 +237,7 @@
                             type="number"
                             value="21"
                             name="min-price"
-                         >
+                          />
                         </label>
 
                         <span class="visually-hidden">
@@ -250,7 +252,7 @@
                             type="number"
                             value="51200"
                             name="max-price"
-                         >
+                          />
                         </label>
                         <span class="visually-hidden">
                           Изменить максимальную цену.
@@ -272,7 +274,7 @@
                           class="visually-hidden filter__control-input"
                           name="black"
                           checked
-                       >
+                        />
                         <span class="filter__control-mark"></span>
                         <span class="filter__control-label">Черный</span>
                       </label>
@@ -284,7 +286,7 @@
                           class="visually-hidden filter__control-input"
                           name="white"
                           checked
-                       >
+                        />
                         <span class="filter__control-mark"></span>
                         <span class="filter__control-label">Белый</span>
                       </label>
@@ -295,7 +297,7 @@
                           type="checkbox"
                           class="visually-hidden filter__control-input"
                           name="blue"
-                       >
+                        />
                         <span class="filter__control-mark"></span>
                         <span class="filter__control-label">Синий</span>
                       </label>
@@ -306,7 +308,7 @@
                           type="checkbox"
                           class="visually-hidden filter__control-input"
                           name="red"
-                       >
+                        />
                         <span class="filter__control-mark"></span>
                         <span class="filter__control-label">Красный</span>
                       </label>
@@ -317,7 +319,7 @@
                           type="checkbox"
                           class="visually-hidden filter__control-input"
                           name="pink"
-                       >
+                        />
                         <span class="filter__control-mark"></span>
                         <span class="filter__control-label">Розовый</span>
                       </label>
@@ -338,7 +340,7 @@
                           name="is-bluetooth"
                           value="true"
                           checked
-                       >
+                        />
                         <span class="filter__mark-circle"></span>
                         <span class="filter__control-label">Есть</span>
                       </label>
@@ -351,7 +353,7 @@
                           name="is-bluetooth"
                           value="false"
                           checked
-                       >
+                        />
                         <span class="filter__mark-circle"></span>
                         <span class="filter__control-label">Нет</span>
                       </label>
@@ -391,7 +393,7 @@
                       src="img/sort_arrow.svg"
                       alt="Стрелка сортировки"
                       class="catalog__sorting-arrow"
-                   >
+                    />
                     <span class="visually-hidden">
                       Сортировка по возрастанию
                     </span>
@@ -401,7 +403,7 @@
                       src="img/sort_arrow.svg"
                       alt="Стрелка сортировки"
                       class="catalog__sorting-arrow catalog__sorting-arrow--down"
-                   >
+                    />
                     <span class="visually-hidden">Сортировка по убыванию</span>
                   </a>
                 </div>
@@ -412,6 +414,11 @@
                 <li>
                   <div class="catalog__item-container" tabindex="0">
                     <div class="catalog__item" tabindex="-1">
+                      <img
+                        src="img/new.svg"
+                        alt="Фото товара"
+                        class="catalog__marker catalog__marker--new"
+                      />
                       <div class="catalog__item-img">
                         <div class="catalog__overlay">
                           <div class="yellow-line" tabindex="0">
@@ -428,7 +435,7 @@
                         <img
                           src="img/products/junior_selfie.jpg"
                           alt="Фото товара"
-                       >
+                        />
                       </div>
                       <div class="catalog__card">
                         <h3 class="catalog__card-title">
@@ -445,6 +452,11 @@
                 <li>
                   <div class="catalog__item-container" tabindex="0">
                     <div class="catalog__item" tabindex="-1">
+                      <img
+                        src="img/new.svg"
+                        alt="Фото товара"
+                        class="catalog__marker"
+                      />
                       <div class="catalog__item-img">
                         <div class="catalog__overlay">
                           <div class="yellow-line" tabindex="0">
@@ -461,7 +473,7 @@
                         <img
                           src="img/products/senior_selfie.jpg"
                           alt="Фото товара"
-                       >
+                        />
                       </div>
                       <div class="catalog__card">
                         <h3 class="catalog__card-title">
@@ -478,6 +490,11 @@
                 <li>
                   <div class="catalog__item-container" tabindex="0">
                     <div class="catalog__item" tabindex="-1">
+                      <img
+                        src="img/new.svg"
+                        alt="Фото товара"
+                        class="catalog__marker catalog__marker--new"
+                      />
                       <div class="catalog__item-img">
                         <div class="catalog__overlay">
                           <div class="yellow-line" tabindex="0">
@@ -494,7 +511,7 @@
                         <img
                           src="img/products/floating_selfie.jpg"
                           alt="Фото товара"
-                       >
+                        />
                       </div>
                       <div class="catalog__card">
                         <h3 class="catalog__card-title">
@@ -511,6 +528,11 @@
                 <li>
                   <div class="catalog__item-container" tabindex="0">
                     <div class="catalog__item" tabindex="-1">
+                      <img
+                        src="img/new.svg"
+                        alt="Фото товара"
+                        class="catalog__marker"
+                      />
                       <div class="catalog__item-img">
                         <div class="catalog__overlay">
                           <div class="yellow-line" tabindex="0">
@@ -527,7 +549,7 @@
                         <img
                           src="img/products/follow_selfie.jpg"
                           alt="Фото товара"
-                       >
+                        />
                       </div>
                       <div class="catalog__card">
                         <h3 class="catalog__card-title">
@@ -587,7 +609,7 @@
           <img
             src="img/device_logo_yellow.svg"
             alt="Логотип магазина device, желтый"
-         >
+          />
         </a>
 
         <ul class="footer__info-list">
@@ -626,7 +648,7 @@
                 <div class="footer__socials-item" tabindex="0">
                   <a href="" tabindex="-1">
                     <div class="footer__socials-container">
-                      <img src="img/socials/nobook.svg" alt="Sadbook">
+                      <img src="img/socials/nobook.svg" alt="Sadbook" />
                     </div>
                   </a>
                 </div>
@@ -635,7 +657,7 @@
                 <div class="footer__socials-item" tabindex="0">
                   <a href="#" tabindex="-1">
                     <div class="footer__socials-container">
-                      <img src="img/socials/nogram.svg" alt="Sadgram">
+                      <img src="img/socials/nogram.svg" alt="Sadgram" />
                     </div>
                   </a>
                 </div>
@@ -644,7 +666,7 @@
                 <div class="footer__socials-item" tabindex="0">
                   <a href="#" tabindex="-1">
                     <div class="footer__socials-container">
-                      <img src="img/socials/noX.svg" alt="SadX">
+                      <img src="img/socials/noX.svg" alt="SadX" />
                     </div>
                   </a>
                 </div>
@@ -654,7 +676,7 @@
 
           <li class="footer__links-item">
             <a class="footer__ha-logo" href="#">
-              <img src="img/HA_logo.svg" alt="Логотип HTML Академии">
+              <img src="img/ha_logo.svg" alt="Логотип HTML Академии" />
             </a>
           </li>
         </ul>
