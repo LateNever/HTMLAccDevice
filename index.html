@@ -25,27 +25,23 @@
                   method="post"
                   class="search-form"
                 >
-                  <div class="search-form__focus" tabindex="0">
-                    <div class="search-form__input">
-                      <label for="search-text" class="search-form__label">
-                        <img src="img/search.svg" alt="Иконка поиска" />
-                      </label>
-                      <input
-                        type="search"
-                        id="search-text"
-                        name="search-text"
-                        placeholder="Поиск по сайту"
-                        class="search-form__text"
-                        tabindex="-1"
-                      />
-                    </div>
+                  <div class="search-form__input">
+                    <label for="search-text" class="search-form__label">
+                      <img src="img/search.svg" alt="Иконка поиска" />
+                    </label>
+                    <input
+                      type="search"
+                      id="search-text"
+                      name="search-text"
+                      placeholder="Поиск по сайту"
+                      class="search-form__text"
+                    />
                   </div>
-                  <div class="search-form__focus" tabindex="0">
+                  <div class="search-form__focus">
                     <input
                       type="submit"
                       value="Найти"
                       class="search-form__button"
-                      tabindex="-1"
                     />
                   </div>
                 </form>
@@ -83,38 +79,47 @@
                   <span>Корзина</span>
                 </a>
                 <div class="cart-popover">
-                  <img
-                    src="img/triangle.svg"
-                    alt="Декоративный треугольник"
-                    class="cart-popover__triangle"
-                  />
                   <ul class="cart-popover__items">
-                    <li class="cart-popover__item" tabindex="0">
-                      <img
-                        src="img/products/junior_selfie.jpg"
-                        alt="Фото товара"
-                        class="cart-popover__img"
-                      />
-                      <span class="cart-popover__item-name">
-                        Любительская селфи-палка
-                      </span>
-                      <button class="cart-popover__close-btn">
-                        <img src="img/close_btn_white.svg" alt="Закрыть" />
-                      </button>
+                    <li class="cart-popover__container">
+                      <a href="#" class="cart-popover__item">
+                        <img
+                          src="img/products/junior_selfie.jpg"
+                          alt="Фото товара"
+                          class="cart-popover__img"
+                        />
+                        <span class="cart-popover__item-name">
+                          Любительская селфи-палка
+                        </span>
+                        <button class="cart-popover__close-btn">
+                          <img
+                            src="img/close_btn_white.svg"
+                            alt="Закрыть"
+                            class="cart-popover__close-img"
+                          />
+                        </button>
+                      </a>
                     </li>
-                    <li class="cart-popover__item" tabindex="0">
-                      <img
-                        src="img/products/senior_selfie.jpg"
-                        alt="Фото товара"
-                        class="cart-popover__img"
-                      />
-                      <span class="cart-popover__item-name">
-                        Профессиональная селфи-палка
-                      </span>
-                      <button class="cart-popover__close-btn">
-                        <img src="img/close_btn_white.svg" alt="Закрыть" />
-                      </button>
+
+                    <li class="cart-popover__container">
+                      <a href="#" class="cart-popover__item">
+                        <img
+                          src="img/products/senior_selfie.jpg"
+                          alt="Фото товара"
+                          class="cart-popover__img"
+                        />
+                        <span class="cart-popover__item-name">
+                          Профессиональная селфи-палка
+                        </span>
+                        <button class="cart-popover__close-btn">
+                          <img
+                            src="img/close_btn_white.svg"
+                            alt="Закрыть"
+                            class="cart-popover__close-img"
+                          />
+                        </button>
+                      </a>
                     </li>
+
                     <li class="cart-popover__total">
                       <div class="cart-popover__quantity">
                         <span>Товаров:</span>
@@ -249,30 +254,21 @@
               </li>
               <li>
                 <ol class="promo__pagination">
-                  <li class="promo__pagination-item" tabindex="0">
+                  <li class="promo__pagination-item">
                     <button
                       class="promo__pagination-button promo__pagination-button--current"
                       type="button"
-                      tabindex="-1"
                     >
                       <span class="visually-hidden">1 фото</span>
                     </button>
                   </li>
-                  <li class="promo__pagination-item" tabindex="0">
-                    <button
-                      class="promo__pagination-button"
-                      type="button"
-                      tabindex="-1"
-                    >
+                  <li class="promo__pagination-item">
+                    <button class="promo__pagination-button" type="button">
                       <span class="visually-hidden">2 фото</span>
                     </button>
                   </li>
-                  <li class="promo__pagination-item" tabindex="0">
-                    <button
-                      class="promo__pagination-button"
-                      type="button"
-                      tabindex="-1"
-                    >
+                  <li class="promo__pagination-item">
+                    <button class="promo__pagination-button" type="button">
                       <span class="visually-hidden">3 фото</span>
                     </button>
                   </li>
@@ -318,64 +314,76 @@
       <section class="categories">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/vr.svg"
-                alt="Пиктограмма категории товаров"
-              />
-            </div>
-            <span class="categories__name"> Виртуальная реальность </span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/vr.svg"
+                  alt="Пиктограмма категории товаров"
+                />
+              </div>
+              <span class="categories__name"> Виртуальная реальность </span>
+            </a>
           </li>
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/monopods.svg"
-                alt="Пиктограмма категории товаров"
-                class="categories__monopode"
-              />
-            </div>
-            <span class="categories__name">
-              Моноподы
-              <br />
-              для селфи
-            </span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/monopods.svg"
+                  alt="Пиктограмма категории товаров"
+                  class="categories__monopode"
+                />
+              </div>
+              <span class="categories__name">
+                Моноподы
+                <br />
+                для селфи
+              </span>
+            </a>
           </li>
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/gopros.svg"
-                alt="Пиктограмма категории товаров"
-              />
-            </div>
-            <span class="categories__name">Экшн-камеры</span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/gopros.svg"
+                  alt="Пиктограмма категории товаров"
+                />
+              </div>
+              <span class="categories__name">Экшн-камеры</span>
+            </a>
           </li>
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/mibands.svg"
-                alt="Пиктограмма категории товаров"
-              />
-            </div>
-            <span class="categories__name">Фитнес-браслеты</span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/mibands.svg"
+                  alt="Пиктограмма категории товаров"
+                />
+              </div>
+              <span class="categories__name">Фитнес-браслеты</span>
+            </a>
           </li>
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/applewatches.svg"
-                alt="Пиктограмма категории товаров"
-              />
-            </div>
-            <span class="categories__name">Умные часы</span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/applewatches.svg"
+                  alt="Пиктограмма категории товаров"
+                />
+              </div>
+              <span class="categories__name">Умные часы</span>
+            </a>
           </li>
-          <li class="categories__item" tabindex="0">
-            <div class="categories__img">
-              <img
-                src="img/product_categories/drones.svg"
-                alt="Пиктограмма категории товаров"
-              />
-            </div>
-            <span class="categories__name">Квадрокоптеры</span>
+          <li>
+            <a href="#" class="categories__item">
+              <div class="categories__img">
+                <img
+                  src="img/product_categories/drones.svg"
+                  alt="Пиктограмма категории товаров"
+                />
+              </div>
+              <span class="categories__name">Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -458,19 +466,17 @@
       <!-- Уникальная доп услуга -->
 
       <section>
-        <ul class="unique" tabindex="0">
-          <li class="unique__pic">
+        <a href="#" class="unique">
+          <div class="unique__pic">
             <img src="img/delivery.svg" alt="Пиктограмма доставки" />
-          </li>
-          <li>
-            <h3 class="unique__service">Доставим редкий товар под заказ</h3>
-          </li>
-          <li class="unique__icon">
+          </div>
+          <h3 class="unique__service">Доставим редкий товар под заказ</h3>
+          <div class="unique__icon">
             <div class="unique__icon-circle">
               <b class="unique__i">i</b>
             </div>
-          </li>
-        </ul>
+          </div>
+        </a>
       </section>
 
       <!-- О нас, контакты -->
@@ -502,10 +508,7 @@
               <span class="about__delivery-name">ТаксБерри</span>
             </li>
           </ul>
-          <div class="yellow-line about__yellow-more" tabindex="0">
-            <div class="yellow-line__decoration"></div>
-            <a href="#" tabindex="-1">Подробнее о нас</a>
-          </div>
+          <a href="#" class="yellow-line about__yellow-more">Подробнее о нас</a>
         </div>
         <div class="about__info">
           <div class="about__line"></div>
@@ -531,10 +534,7 @@
             </li>
             <li class="about__description">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <div class="yellow-line about__yellow-send" tabindex="0">
-            <div class="yellow-line__decoration"></div>
-            <a href="#" tabindex="-1">Напишите нам</a>
-          </div>
+          <a href="#" class="yellow-line about__yellow-send">Напишите нам</a>
         </div>
       </section>
 
@@ -615,9 +615,9 @@
             </ul>
           </li>
           <li class="footer__info-item">
-            <div class="footer__tel-container" tabindex="0">
+            <div class="footer__tel-container">
               <span class="footer__tel">Тел.:</span>
-              <a class="footer__phone" href="tel:88005558628" tabindex="-1">
+              <a class="footer__phone" href="tel:88128121212">
                 +7 (812) 812-12-12
               </a>
             </div>
@@ -630,31 +630,34 @@
           <li class="footer__links-item">
             <ul class="footer__socials-list">
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="https://wwww.facebook.com/htmlacademy" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/nobook.svg" alt="Sadbook" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://wwww.facebook.com/htmlacademy"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nobook.svg" alt="Sadbook" />
+                  </div>
+                </a>
               </li>
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="https://www.instagram.com/htmlacademy" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/nogram.svg" alt="Sadgram" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://www.instagram.com/htmlacademy"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nogram.svg" alt="Sadgram" />
+                  </div>
+                </a>
               </li>
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="https://twitter.com/htmlacademy_ru" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/noX.svg" alt="SadX" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://twitter.com/htmlacademy_ru"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/noX.svg" alt="SadX" />
+                  </div>
+                </a>
               </li>
             </ul>
           </li>
