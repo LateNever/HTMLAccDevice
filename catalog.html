@@ -15,7 +15,7 @@
         <div class="header__content">
           <h1 class="visually-hidden">Магазин device</h1>
           <a href="index.html" class="header__logo logo">
-            <img src="img/device_logo.svg" alt="Логотип магазиина device" />
+            <img src="img/device_logo.svg" alt="Логотип магазина device" />
           </a>
           <div class="header__nav-section">
             <ul class="header__nav-items">
@@ -25,27 +25,23 @@
                   method="post"
                   class="search-form"
                 >
-                  <div class="search-form__focus" tabindex="0">
-                    <div class="search-form__input">
-                      <label for="search-text" class="search-form__label">
-                        <img src="img/search.svg" alt="Иконка поиска" />
-                      </label>
-                      <input
-                        type="search"
-                        id="search-text"
-                        name="search-text"
-                        placeholder="Поиск по сайту"
-                        class="search-form__text"
-                        tabindex="-1"
-                      />
-                    </div>
+                  <div class="search-form__input">
+                    <label for="search-text" class="search-form__label">
+                      <img src="img/search.svg" alt="Иконка поиска" />
+                    </label>
+                    <input
+                      type="search"
+                      id="search-text"
+                      name="search-text"
+                      placeholder="Поиск по сайту"
+                      class="search-form__text"
+                    />
                   </div>
-                  <div class="search-form__focus" tabindex="0">
+                  <div class="search-form__focus">
                     <input
                       type="submit"
                       value="Найти"
                       class="search-form__button"
-                      tabindex="-1"
                     />
                   </div>
                 </form>
@@ -53,7 +49,9 @@
               <li>
                 <a href="#" class="header__nav-link header__login">
                   <img src="img/login.svg" alt="Иконка пользоватля" />
-                  <span>Войти</span>
+                  <span class="header__login-signin"
+                    >Войти длинное предлииное название asdfasdfasd</span
+                  >
                 </a>
               </li>
             </ul>
@@ -81,14 +79,9 @@
                   <span>Корзина</span>
                 </a>
                 <div class="cart-popover">
-                  <img
-                    src="img/triangle.svg"
-                    alt="Декоративный треугольник"
-                    class="cart-popover__triangle"
-                  />
                   <ul class="cart-popover__items">
-                    <li class="cart-popover__frame">
-                      <div class="cart-popover__item" tabindex="0">
+                    <li class="cart-popover__container">
+                      <a href="#" class="cart-popover__item">
                         <img
                           src="img/products/junior_selfie.jpg"
                           alt="Фото товара"
@@ -98,12 +91,17 @@
                           Любительская селфи-палка
                         </span>
                         <button class="cart-popover__close-btn">
-                          <img src="img/close_btn_white.svg" alt="Закрыть" />
+                          <img
+                            src="img/close_btn_white.svg"
+                            alt="Закрыть"
+                            class="cart-popover__close-img"
+                          />
                         </button>
-                      </div>
+                      </a>
                     </li>
-                    <li class="cart-popover__frame">
-                      <div class="cart-popover__item" tabindex="0">
+
+                    <li class="cart-popover__container">
+                      <a href="#" class="cart-popover__item">
                         <img
                           src="img/products/senior_selfie.jpg"
                           alt="Фото товара"
@@ -113,10 +111,15 @@
                           Профессиональная селфи-палка
                         </span>
                         <button class="cart-popover__close-btn">
-                          <img src="img/close_btn_white.svg" alt="Закрыть" />
+                          <img
+                            src="img/close_btn_white.svg"
+                            alt="Закрыть"
+                            class="cart-popover__close-img"
+                          />
                         </button>
-                      </div>
+                      </a>
                     </li>
+
                     <li class="cart-popover__total">
                       <div class="cart-popover__quantity">
                         <span>Товаров:</span>
@@ -414,156 +417,145 @@
             <div class="catalog__products">
               <ul class="catalog__products-grid">
                 <li>
-                  <div class="catalog__item-container" tabindex="0">
-                    <div class="catalog__item" tabindex="-1">
-                      <img
-                        src="img/new.svg"
-                        alt="Фото товара"
-                        class="catalog__marker catalog__marker--new"
-                      />
-                      <div class="catalog__item-img">
-                        <div class="catalog__overlay">
-                          <div class="yellow-line" tabindex="0">
-                            <button
-                              class="yellow-line__button"
-                              type="submit"
-                              tabindex="-1"
-                            >
-                              Подробнее
-                            </button>
-                            <div class="yellow-line__decoration"></div>
-                          </div>
+                  <!-- <div class="catalog__item-container" tabindex="0"> -->
+                  <a href="#" class="catalog__item">
+                    <img
+                      src="img/new.svg"
+                      alt="Фото товара"
+                      class="catalog__marker catalog__marker--new"
+                    />
+                    <div class="catalog__item-img">
+                      <div class="catalog__overlay">
+                        <div class="yellow-line" tabindex="0">
+                          <button
+                            class="yellow-line__button"
+                            type="submit"
+                            tabindex="-1"
+                          >
+                            Подробнее
+                          </button>
+                          <div class="yellow-line__decoration"></div>
                         </div>
-                        <img
-                          src="img/products/junior_selfie.jpg"
-                          alt="Фото товара"
-                        />
                       </div>
-                      <div class="catalog__card">
-                        <h3 class="catalog__card-title">
-                          Любительская селфи-палка
-                        </h3>
-                        <div class="catalog__card-price">
-                          <b class="catalog__price-value">500</b>
-                          <b class="catalog__price-value">₽</b>
-                        </div>
+                      <img
+                        src="img/products/junior_selfie.jpg"
+                        alt="Фото товара"
+                      />
+                    </div>
+                    <div class="catalog__card">
+                      <h3 class="catalog__card-title">
+                        Любительская селфи-палка
+                      </h3>
+                      <div class="catalog__card-price">
+                        <b class="catalog__price-value">500</b>
+                        <b class="catalog__price-value">₽</b>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li>
-                  <div class="catalog__item-container" tabindex="0">
-                    <div class="catalog__item" tabindex="-1">
-                      <img
-                        src="img/new.svg"
-                        alt="Фото товара"
-                        class="catalog__marker"
-                      />
-                      <div class="catalog__item-img">
-                        <div class="catalog__overlay">
-                          <div class="yellow-line" tabindex="0">
-                            <button
-                              class="yellow-line__button"
-                              type="submit"
-                              tabindex="-1"
-                            >
-                              Подробнее
-                            </button>
-                            <div class="yellow-line__decoration"></div>
-                          </div>
+                  <a href="#" class="catalog__item">
+                    <img
+                      src="img/new.svg"
+                      alt="Фото товара"
+                      class="catalog__marker"
+                    />
+                    <div class="catalog__item-img">
+                      <div class="catalog__overlay">
+                        <div class="yellow-line" tabindex="0">
+                          <button
+                            class="yellow-line__button"
+                            type="submit"
+                            tabindex="-1"
+                          >
+                            Подробнее
+                          </button>
+                          <div class="yellow-line__decoration"></div>
                         </div>
-                        <img
-                          src="img/products/senior_selfie.jpg"
-                          alt="Фото товара"
-                        />
                       </div>
-                      <div class="catalog__card">
-                        <h3 class="catalog__card-title">
-                          Профессиональная селфи-палка
-                        </h3>
-                        <div class="catalog__card-price">
-                          <b class="catalog__price-value">1 500</b>
-                          <b class="catalog__price-value">₽</b>
-                        </div>
+                      <img
+                        src="img/products/senior_selfie.jpg"
+                        alt="Фото товара"
+                      />
+                    </div>
+                    <div class="catalog__card">
+                      <h3 class="catalog__card-title">
+                        Профессиональная селфи-палка
+                      </h3>
+                      <div class="catalog__card-price">
+                        <b class="catalog__price-value">1 500</b>
+                        <b class="catalog__price-value">₽</b>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li>
-                  <div class="catalog__item-container" tabindex="0">
-                    <div class="catalog__item" tabindex="-1">
-                      <img
-                        src="img/new.svg"
-                        alt="Фото товара"
-                        class="catalog__marker catalog__marker--new"
-                      />
-                      <div class="catalog__item-img">
-                        <div class="catalog__overlay">
-                          <div class="yellow-line" tabindex="0">
-                            <button
-                              class="yellow-line__button"
-                              type="submit"
-                              tabindex="-1"
-                            >
-                              Подробнее
-                            </button>
-                            <div class="yellow-line__decoration"></div>
-                          </div>
+                  <a href="#" class="catalog__item">
+                    <img
+                      src="img/new.svg"
+                      alt="Фото товара"
+                      class="catalog__marker catalog__marker--new"
+                    />
+                    <div class="catalog__item-img">
+                      <div class="catalog__overlay">
+                        <div class="yellow-line" tabindex="0">
+                          <button
+                            class="yellow-line__button"
+                            type="submit"
+                            tabindex="-1"
+                          >
+                            Подробнее
+                          </button>
+                          <div class="yellow-line__decoration"></div>
                         </div>
-                        <img
-                          src="img/products/floating_selfie.jpg"
-                          alt="Фото товара"
-                        />
                       </div>
-                      <div class="catalog__card">
-                        <h3 class="catalog__card-title">
-                          Непотопляемая селфи-палка
-                        </h3>
-                        <div class="catalog__card-price">
-                          <b class="catalog__price-value">2 500</b>
-                          <b class="catalog__price-value">₽</b>
-                        </div>
+                      <img
+                        src="img/products/floating_selfie.jpg"
+                        alt="Фото товара"
+                      />
+                    </div>
+                    <div class="catalog__card">
+                      <h3 class="catalog__card-title">
+                        Непотопляемая селфи-палка
+                      </h3>
+                      <div class="catalog__card-price">
+                        <b class="catalog__price-value">2 500</b>
+                        <b class="catalog__price-value">₽</b>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li>
-                  <div class="catalog__item-container" tabindex="0">
-                    <div class="catalog__item" tabindex="-1">
-                      <img
-                        src="img/new.svg"
-                        alt="Фото товара"
-                        class="catalog__marker"
-                      />
-                      <div class="catalog__item-img">
-                        <div class="catalog__overlay">
-                          <div class="yellow-line" tabindex="0">
-                            <button
-                              class="yellow-line__button"
-                              type="submit"
-                              tabindex="-1"
-                            >
-                              Подробнее
-                            </button>
-                            <div class="yellow-line__decoration"></div>
-                          </div>
+                  <a href="#" class="catalog__item">
+                    <img
+                      src="img/new.svg"
+                      alt="Фото товара"
+                      class="catalog__marker"
+                    />
+                    <div class="catalog__item-img">
+                      <div class="catalog__overlay">
+                        <div class="yellow-line">
+                          <button class="yellow-line__button" type="submit">
+                            Подробнее
+                          </button>
+                          <div class="yellow-line__decoration"></div>
                         </div>
-                        <img
-                          src="img/products/follow_selfie.jpg"
-                          alt="Фото товара"
-                        />
                       </div>
-                      <div class="catalog__card">
-                        <h3 class="catalog__card-title">
-                          Селфи-палка «Следуй за мной»
-                        </h3>
-                        <div class="catalog__card-price">
-                          <b class="catalog__price-value">1 500</b>
-                          <b class="catalog__price-value">₽</b>
-                        </div>
+                      <img
+                        src="img/products/follow_selfie.jpg"
+                        alt="Фото товара"
+                      />
+                    </div>
+                    <div class="catalog__card">
+                      <h3 class="catalog__card-title">
+                        Селфи-палка «Следуй за мной»
+                      </h3>
+                      <div class="catalog__card-price">
+                        <b class="catalog__price-value">1 500</b>
+                        <b class="catalog__price-value">₽</b>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
               </ul>
 
@@ -574,61 +566,26 @@
               <div class="pagination">
                 <a class="pagination__link" href="#">Назад</a>
                 <ul class="pagination__numbers">
-                  <li class="pagination__item" tabindex="0">
+                  <li class="pagination__item">
                     <a
                       class="pagination__page pagination__link--current"
                       href="#"
-                      tabindex="-1"
                     >
                       1
                     </a>
                   </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1"
-                      >СТРАНИЦА</a
-                    >
+                  <li class="pagination__item">
+                    <a class="pagination__page" href="#">СТРАНИЦА</a>
                   </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">3</a>
+                  <li class="pagination__item">
+                    <a class="pagination__page" href="#">3</a>
                   </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">...</a>
+                  <li class="pagination__item">
+                    <a class="pagination__page" href="#">...</a>
                   </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
+                  <li class="pagination__item">
+                    <a class="pagination__page" href="#">15</a>
                   </li>
-                  <!--  -->
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <li class="pagination__item" tabindex="0">
-                    <a class="pagination__page" href="#" tabindex="-1">15</a>
-                  </li>
-                  <!--  -->
                 </ul>
                 <a class="pagination__link pagination__next" href="#">Вперед</a>
               </div>
@@ -654,21 +611,21 @@
           </li>
           <li class="footer__info-item">
             <ul class="footer__services-list">
-              <li>
+              <li class="footer__services-item">
                 <a class="footer__services-link" href="#">Доставка</a>
               </li>
-              <li>
+              <li class="footer__services-item">
                 <a class="footer__services-link" href="#">Гарантия</a>
               </li>
-              <li>
+              <li class="footer__services-item">
                 <a class="footer__services-link" href="#">Контакты</a>
               </li>
             </ul>
           </li>
           <li class="footer__info-item">
-            <div class="footer__tel-container" tabindex="0">
+            <div class="footer__tel-container">
               <span class="footer__tel">Тел.:</span>
-              <a class="footer__phone" href="tel:88005558628" tabindex="-1">
+              <a class="footer__phone" href="tel:88128121212">
                 +7 (812) 812-12-12
               </a>
             </div>
@@ -681,31 +638,34 @@
           <li class="footer__links-item">
             <ul class="footer__socials-list">
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/nobook.svg" alt="Sadbook" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://wwww.facebook.com/htmlacademy"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nobook.svg" alt="Sadbook" />
+                  </div>
+                </a>
               </li>
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="#" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/nogram.svg" alt="Sadgram" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://www.instagram.com/htmlacademy"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/nogram.svg" alt="Sadgram" />
+                  </div>
+                </a>
               </li>
               <li class="footer__socials-li">
-                <div class="footer__socials-item" tabindex="0">
-                  <a href="#" tabindex="-1">
-                    <div class="footer__socials-container">
-                      <img src="img/socials/noX.svg" alt="SadX" />
-                    </div>
-                  </a>
-                </div>
+                <a
+                  href="https://twitter.com/htmlacademy_ru"
+                  class="footer__socials-link"
+                >
+                  <div class="footer__socials-container">
+                    <img src="img/socials/noX.svg" alt="SadX" />
+                  </div>
+                </a>
               </li>
             </ul>
           </li>

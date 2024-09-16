@@ -1258,10 +1258,21 @@ body {
   /* margin: 0 20px; */
 }
 
-.footer__services-link:hover,
+.footer__tel {
+  text-decoration: underline;
+}
+
+.footer__phone {
+  text-decoration: underline;
+}
+
+.footer__services-link:hover {
+  color: #ffc700;
+  border-bottom: solid 2px;
+}
+
 .footer__tel-container:hover {
   color: #ffc700;
-  border-bottom: solid 2px #ffc700;
 }
 
 .footer__tel-container:hover .footer__tel,
@@ -2005,6 +2016,7 @@ fieldset {
 
 .catalog__item {
   position: relative;
+  display: block;
 }
 
 .catalog__marker {
@@ -2023,7 +2035,7 @@ fieldset {
   position: relative;
 }
 
-.catalog__item-container:focus {
+.catalog__item:focus {
   outline: solid 2px #af4fff;
 }
 
@@ -2130,34 +2142,28 @@ fieldset {
   /* width: 200px; */
   justify-content: center;
   font-family: "Rubik", sans-serif;
-  color: #444444;
 }
 
 .pagination__page {
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
+  /* opacity: 0.3; */
 }
 
 .pagination__link--current {
-  opacity: 1;
+  color: rgba(68, 68, 68, 1);
 }
 
 .pagination__page:hover {
-  opacity: 1;
+  color: rgba(68, 68, 68, 1);
 }
 
 .pagination__page:active {
   opacity: 0.1;
 }
 
-/*
 .pagination__item {
-  min-width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+  position: relative;
+}
 
 .pagination__item:focus {
   outline: solid 2px #af4fff;
