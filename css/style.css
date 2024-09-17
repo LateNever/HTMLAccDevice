@@ -3,6 +3,7 @@
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2");
   font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2");
   font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2");
   font-display: swap;
+  font-style: normal;
 }
 
 /* ОБНУЛЕНИЕ */
@@ -27,18 +30,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-*:active {
-  outline: none;
-}
-
-:focus {
-  outline: none;
-}
-
-:focus-visible {
-  outline: solid 2px #af4fff;
+  text-decoration: none;
+  color: black;
+  list-style: none;
 }
 
 img {
@@ -46,24 +40,18 @@ img {
   object-fit: contain;
 }
 
-li {
-  list-style: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
+/* *:active {
+  outline: none;
+} */
 
 /* ОБЩИЕ СТИЛИ */
 
-.visually-hidden {
-  display: none;
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: solid 2px #af4fff;
 }
 
 body {
@@ -74,6 +62,10 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 .section {
@@ -95,7 +87,8 @@ body {
   position: relative;
 }
 
-.header__background {
+.header::before {
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -159,6 +152,7 @@ body {
 
 .search-form {
   display: flex;
+  position: relative;
 }
 
 .search-form__label {
@@ -166,17 +160,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0px 16px;
-}
-
-.search-form__input {
-  display: flex;
-  align-items: center;
-  width: 360px;
-  height: 40px;
-  border: solid 2px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  position: relative;
 }
 
 /* .search-form__input:hover {
@@ -200,7 +183,20 @@ body {
   /* pointer-events: none; */
 }
 
+.search-form__input {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 40px;
+
+  border: solid 2px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  position: relative;
+}
+
 .search-form__text {
+  padding-left: 40px;
   border: none;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -209,6 +205,19 @@ body {
   outline: none;
   width: 100%;
   /* cursor: pointer; */
+}
+
+.search-form::before {
+  /* font-size: 0; */
+  content: url(../img/search.svg);
+  font-size: 0;
+  width: 14px;
+  /* background-color: #af4fff; */
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  /* z-index: 100; */
 }
 
 .search-form__text::placeholder {
@@ -808,7 +817,8 @@ body {
   position: relative;
 }
 
-.services__background {
+.services::before {
+  content: "";
   background-color: #f0f0f0;
   width: 100%;
   height: 289px;
@@ -819,6 +829,7 @@ body {
 
 .services__section {
   display: flex;
+  position: relative;
 }
 
 .services__pagination {
@@ -1475,24 +1486,27 @@ body {
   font-weight: 700;
   line-height: 26px;
   margin-bottom: 14px;
-  position: relative;
+  /* position: relative; */
 }
 
-.modal__field-label--info::after {
-  content: "i";
-  display: inline-block;
-  text-align: center;
+.modal__field-label--info {
+  /* display: inline-block; */
+  /* text-align: center; */
   width: 26px;
   height: 26px;
+  border: none;
   border-radius: 50%;
   background-color: #ffe17f;
-  vertical-align: middle;
-  margin-left: 5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  /* vertical-align: middle; */
+  /* margin-left: 5px; */
 }
 
 .info-popover {
   position: absolute;
-  display: flex;
   flex-direction: column;
   top: 27px;
   left: -20px;
@@ -1500,9 +1514,12 @@ body {
   display: none;
 }
 
-.info-popover__triangle {
+.info-popover::before {
+  font-size: 0;
+  content: url(../img/triangle.svg);
   width: 14px;
-  margin-left: 150px;
+  z-index: 10;
+  margin-left: 146px;
 }
 
 .info-popover__content {
@@ -1515,6 +1532,11 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: left;
+}
+
+.modal__field-label--info:hover .info-popover {
+  display: flex;
 }
 
 .modal__field {

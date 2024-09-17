@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Device</title>
-    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+    <!-- <link rel="icon" href="/favicon.svg" type="image/x-icon" /> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -11,7 +12,6 @@
 
     <header class="section">
       <div class="header container">
-        <div class="header__background"></div>
         <div class="header__content">
           <h1 class="visually-hidden">Магазин device</h1>
           <a href="index.html" class="header__logo logo">
@@ -26,9 +26,6 @@
                   class="search-form"
                 >
                   <div class="search-form__input">
-                    <label for="search-text" class="search-form__label">
-                      <img src="img/search.svg" alt="Иконка поиска" />
-                    </label>
                     <input
                       type="search"
                       id="search-text"
@@ -49,9 +46,7 @@
               <li>
                 <a href="#" class="header__nav-link header__login">
                   <img src="img/login.svg" alt="Иконка пользоватля" />
-                  <span class="header__login-signin"
-                    >Войти длинное предлииное название asdfasdfasd</span
-                  >
+                  <span class="header__login-signin">Войти</span>
                 </a>
               </li>
             </ul>
@@ -391,7 +386,6 @@
       <!-- Сопутствующие услуги -->
 
       <section class="services">
-        <div class="services__background"></div>
         <div class="services__section container">
           <h2 class="visually-hidden">Дополнительные услуги</h2>
           <ol class="services__pagination">
@@ -736,29 +730,28 @@
               />
             </p>
             <div class="modal__field-group modal__group-counter">
-              <label
-                class="modal__field-label modal__field-label--info"
-                for="delivery-quantity"
-              >
-                Количество:
+              <label class="modal__field-label" for="delivery-quantity">
+                <span> Количество: </span>
+                <button class="modal__field-label--info">
+                  <span> i </span>
+                  <div class="info-popover">
+                    <p class="info-popover__content">
+                      Постараемся найти, сколько нужно. Привезём сколько
+                      получится по требованиям к провозу багажа.
+                    </p>
+                  </div>
+                </button>
               </label>
-              <div class="info-popover">
-                <img
-                  src="img/triangle.svg"
-                  alt=""
-                  class="info-popover__triangle"
-                />
-                <p class="info-popover__content">
-                  Постараемся найти, сколько нужно. Привезём сколько получится
-                  по требованиям к провозу багажа.
-                </p>
-              </div>
 
               <div class="modal__counter">
+                <span class="visually-hidden"
+                  >Количество товаров в корзине</span
+                >
                 <button type="button" class="modal__counter-button">−</button>
 
                 <input
                   class="modal__field modal__field-counter"
+                  placeholder="0"
                   type="number"
                   value="1"
                   name="delivery-quantity"
