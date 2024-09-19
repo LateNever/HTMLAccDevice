@@ -142,6 +142,14 @@ body {
   cursor: pointer;
 }
 
+.header__nav-catalog--opened::after {
+  content: url(../img/catalog_opened.svg);
+}
+
+.header__nav-catalog::after {
+  content: url(../img/catalog.svg);
+}
+
 .header__nav-catalog:hover .header__catalog-icon {
   opacity: 1;
 }
@@ -274,6 +282,10 @@ body {
   margin-left: 12px;
 }
 
+.header__login::before {
+  content: url(../img/login.svg);
+}
+
 .header__compare-icon {
   margin-right: 9px;
 }
@@ -281,6 +293,11 @@ body {
 .header__compare {
   margin-right: 36px;
 }
+
+.header__compare::before {
+  content: url(../img/compare.svg);
+}
+
 .header__cart-box {
   display: flex;
   justify-content: center;
@@ -302,6 +319,10 @@ body {
 
 .header__nav-cart {
   position: relative;
+}
+
+.header__cart::before {
+  content: url(../img/cart.svg);
 }
 
 .cart-popover {
@@ -1114,6 +1135,11 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+.subscribe__description::before {
+  content: url(../img/check_mark.svg);
+  margin-right: 17px;
+}
+
 .subscribe__form {
   display: flex;
   justify-content: space-between;
@@ -1183,10 +1209,6 @@ body {
 
 .subscribe__mark {
   margin-right: 17px;
-}
-
-.subscribe__description {
-  font-family: "Rubik", sans-serif;
 }
 
 /* Подвал */
@@ -1351,6 +1373,7 @@ body {
 
 .footer__socials-container {
   background-color: rgba(255, 255, 255, 0.3);
+  padding: 11px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2041,16 +2064,13 @@ fieldset {
   display: block;
 }
 
-.catalog__marker {
-  display: none;
+.catalog__new::after {
+  content: url(../img/new.svg);
+  /* display: block; */
   position: absolute;
   top: 27px;
   right: 27px;
-  z-index: 1;
-}
-
-.catalog__marker--new {
-  display: block;
+  z-index: 0;
 }
 
 .catalog__item-img {
