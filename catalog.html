@@ -246,12 +246,15 @@
                       <label class="filter__control" tabindex="0">
                         <input
                           type="checkbox"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input visually-hidden"
                           name="black"
                           checked
+                          disabled
                         />
                         <span class="filter__control-mark"></span>
-                        <span class="filter__control-label">Черный</span>
+                        <span class="filter__control-label" disabled
+                          >Черный</span
+                        >
                       </label>
                     </li>
                     <li class="filter__item">
@@ -336,12 +339,7 @@
                   </ul>
                 </fieldset>
               </div>
-              <div class="yellow-line" tabindex="0">
-                <button class="yellow-line__button" type="submit" tabindex="-1">
-                  Показать
-                </button>
-                <div class="yellow-line__decoration"></div>
-              </div>
+              <button class="yellow-line" type="submit">Показать</button>
             </form>
           </div>
 
@@ -390,16 +388,9 @@
                   <a href="#" class="catalog__item">
                     <div class="catalog__item-img catalog__new">
                       <div class="catalog__overlay">
-                        <div class="yellow-line" tabindex="0">
-                          <button
-                            class="yellow-line__button"
-                            type="submit"
-                            tabindex="-1"
-                          >
-                            Подробнее
-                          </button>
-                          <div class="yellow-line__decoration"></div>
-                        </div>
+                        <button class="yellow-line" type="submit">
+                          Подробнее
+                        </button>
                       </div>
                       <img
                         src="img/products/junior_selfie.jpg"
@@ -421,16 +412,9 @@
                   <a href="#" class="catalog__item">
                     <div class="catalog__item-img">
                       <div class="catalog__overlay">
-                        <div class="yellow-line" tabindex="0">
-                          <button
-                            class="yellow-line__button"
-                            type="submit"
-                            tabindex="-1"
-                          >
-                            Подробнее
-                          </button>
-                          <div class="yellow-line__decoration"></div>
-                        </div>
+                        <button class="yellow-line" type="submit">
+                          Подробнее
+                        </button>
                       </div>
                       <img
                         src="img/products/senior_selfie.jpg"
@@ -452,16 +436,9 @@
                   <a href="#" class="catalog__item">
                     <div class="catalog__item-img catalog__new">
                       <div class="catalog__overlay">
-                        <div class="yellow-line" tabindex="0">
-                          <button
-                            class="yellow-line__button"
-                            type="submit"
-                            tabindex="-1"
-                          >
-                            Подробнее
-                          </button>
-                          <div class="yellow-line__decoration"></div>
-                        </div>
+                        <button class="yellow-line" type="submit">
+                          Подробнее
+                        </button>
                       </div>
                       <img
                         src="img/products/floating_selfie.jpg"
@@ -483,12 +460,9 @@
                   <a href="#" class="catalog__item">
                     <div class="catalog__item-img">
                       <div class="catalog__overlay">
-                        <div class="yellow-line">
-                          <button class="yellow-line__button" type="submit">
-                            Подробнее
-                          </button>
-                          <div class="yellow-line__decoration"></div>
-                        </div>
+                        <button class="yellow-line" type="submit">
+                          Подробнее
+                        </button>
                       </div>
                       <img
                         src="img/products/follow_selfie.jpg"
@@ -508,7 +482,7 @@
                 </li>
               </ul>
 
-              <button class="yellow-line__button more-button" type="button">
+              <button class="yellow-line more-button" type="button">
                 Загрузить ещё
               </button>
 

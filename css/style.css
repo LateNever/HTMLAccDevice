@@ -653,6 +653,11 @@ body {
   padding: 10px 0;
   letter-spacing: 3px;
   cursor: pointer;
+  border: none;
+  background: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .yellow-line::before {
@@ -1876,6 +1881,8 @@ fieldset {
   opacity: 0.3;
 }
 
+.filter__control-label:disabled,
+.filter__control-mark:disabled,
 .filter__item:disabled,
 .filter__control-input:disabled,
 .catalog__select-control:disabled {
