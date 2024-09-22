@@ -105,7 +105,7 @@ body {
 }
 
 .header__logo {
-  width: 145px;
+  /* width: 145px; */
   margin-top: 17px;
   margin-bottom: 30px;
 }
@@ -1483,6 +1483,8 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  background-image: url("../img/close_btn.svg");
+  background-repeat: no-repeat;
 }
 
 .modal__close-btn:hover {
@@ -1680,28 +1682,6 @@ body {
   z-index: 0;
 }
 
-/* Включение модального окна и поповеров */
-
-.modal {
-  display: flex;
-  display: none;
-}
-
-.cart-popover {
-  display: flex;
-  display: none;
-}
-
-.info-popover {
-  display: flex;
-  display: none;
-}
-
-.header__catalog-popover {
-  display: grid;
-  display: none;
-}
-
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
@@ -1733,6 +1713,16 @@ body {
   display: flex;
   align-items: center;
   font-size: 16px;
+}
+
+.main__breadcrumb::after {
+  content: url(../img/arrow.svg);
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.main__breadcrumb:last-child::after {
+  content: "";
 }
 
 .main__breadcrumb:hover {
@@ -1881,12 +1871,10 @@ fieldset {
   opacity: 0.3;
 }
 
-.filter__control-label:disabled,
-.filter__control-mark:disabled,
-.filter__item:disabled,
-.filter__control-input:disabled,
-.catalog__select-control:disabled {
+.filter__item--disabled,
+.filter__item--disabled:hover {
   opacity: 0.1;
+  outline: none;
 }
 
 .filter__item:focus,
@@ -1898,6 +1886,10 @@ fieldset {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.filter__item--disabled .filter__control {
+  cursor: default;
 }
 
 .filter__control-label {
@@ -2035,9 +2027,10 @@ fieldset {
 
 .catalog__arrow {
   width: 30px;
-  height: 30px;
+  /* height: 30px; */
   display: flex;
   justify-content: center;
+  font-size: 0;
 }
 
 .catalog__arrow:focus {
@@ -2216,4 +2209,26 @@ fieldset {
 
 .pagination__item:focus {
   outline: solid 2px #af4fff;
+}
+
+/* Включение модального окна и поповеров */
+
+.modal {
+  display: flex;
+  display: none;
+}
+
+.cart-popover {
+  display: flex;
+  display: none;
+}
+
+.info-popover {
+  display: flex;
+  display: none;
+}
+
+.header__catalog-popover {
+  display: grid;
+  display: none;
 }
