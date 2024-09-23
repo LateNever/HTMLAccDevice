@@ -669,7 +669,7 @@ body {
   z-index: -1;
   transition: 0.2s ease-in-out;
 }
-
+/* 
 .yellow-line__decoration {
   position: absolute;
   height: 8px;
@@ -677,10 +677,23 @@ body {
   width: 100%;
   z-index: -1;
   transition: 0.2s ease-in-out;
-}
+} */
 
 .yellow-line:focus {
   outline: solid 2px #af4fff;
+}
+
+.yellow-line--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.yellow-line:disabled {
+  opacity: 0.3;
+}
+
+.disabled {
+  opacity: 0.3;
 }
 
 .yellow-line:hover::before {
@@ -688,7 +701,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.yellow-line:active .yellow-line__decoration {
+.yellow-line:active::before {
   height: 100%;
   background-color: #ffcc33;
 }
