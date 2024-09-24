@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Device</title>
-    <!-- <link rel="icon" href="/favicon.svg" type="image/x-icon" /> -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -41,11 +40,9 @@
                     />
                   </div>
                   <div class="search-form__focus">
-                    <input
-                      type="submit"
-                      value="Найти"
-                      class="search-form__button"
-                    />
+                    <button class="search-form__button" type="submit">
+                      Найти
+                    </button>
                   </div>
                 </form>
               </li>
@@ -142,7 +139,7 @@
                       </div>
                     </li>
                     <li class="cart-popover__open-cart">
-                      <button class="cart-popover__open-button">
+                      <button disabled class="cart-popover__open-button">
                         Открыть корзину
                       </button>
                     </li>
@@ -431,30 +428,24 @@
           <h2 class="visually-hidden">Дополнительные услуги</h2>
           <ol class="services__pagination">
             <li class="services__container--current services__container">
-              <!-- <div class="services__item"> -->
               <button
                 class="services__button services__button--current yellow-line"
                 type="button"
               >
                 Доставка
               </button>
-              <!-- </div> -->
             </li>
 
             <li class="services__container">
-              <!-- <div class="services__item"> -->
               <button class="services__button yellow-line" type="button">
                 Гарантия
               </button>
-              <!-- </div> -->
             </li>
 
             <li class="services__container">
-              <!-- <div class="services__item"> -->
               <button class="services__button yellow-line" type="button">
                 Кредит
               </button>
-              <!-- </div> -->
             </li>
           </ol>
           <div class="services__content services__content--current">
@@ -617,14 +608,15 @@
                   Email
                 </label>
                 <input
-                  class="subscribe__field"
+                  class="subscribe__field subscribe__field--invalid"
                   placeholder="Ваш e-mail"
                   type="email"
                   name="newsletter-email"
                   id="newsletter-email"
                   required
+                  disabled
                 />
-                <button class="subscribe__button" type="submit">
+                <button disabled class="subscribe__button" type="submit">
                   Подписаться
                 </button>
               </form>
@@ -775,7 +767,6 @@
                 type="text"
                 name="delivery-name"
                 id="delivery-name"
-                required
               />
             </p>
             <p class="modal__field-group">
@@ -804,7 +795,6 @@
                 type="text"
                 name="delivery-item"
                 id="delivery-item"
-                required
               />
             </p>
             <div class="modal__field-group modal__group-counter">
@@ -825,7 +815,9 @@
                 <span class="visually-hidden"
                   >Количество товаров в корзине</span
                 >
-                <button type="button" class="modal__counter-button">−</button>
+                <button disabled type="button" class="modal__counter-button">
+                  −
+                </button>
 
                 <input
                   class="modal__field modal__field-counter"
@@ -841,13 +833,8 @@
             </div>
           </div>
 
-          <button class="modal__button" type="submit">
-            <span class="yellow-line yellow-line--w200">
-              <span class="modal__button-send">Отправить</span>
-              <span
-                class="yellow-line__decoration yellow-line__decoration--modal"
-              ></span>
-            </span>
+          <button disabled class="yellow-line yellow-line--modal" type="submit">
+            Отправить
           </button>
         </form>
       </div>
