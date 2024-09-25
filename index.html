@@ -9,6 +9,17 @@
   <body>
     <!-- HEADER -->
 
+    <!--
+    Осталось сделать
+    - Оптимизация дивов/оберток, фокусов
+    - Возможно есть момент по переполнению
+    - Ховеры у дизейблд убрать
+    - Пиксель перфект
+    - оформление кода по Академски
+    - Убрать закомментированый код
+    В остальном +/- все, надо направить свои комментарии по определенным моментам
+    -->
+
     <header class="section">
       <div class="header container">
         <div class="header__content">
@@ -149,16 +160,22 @@
             </ul>
           </div>
           <div class="header__services">
-            <ul class="header__catalog">
-              <li>
-                <a
-                  href="catalog.html"
-                  class="header__nav-catalog header__nav-catalog--opened"
-                >
-                  Каталог товаров
-                </a>
-              </li>
-            </ul>
+            <!-- <div class="header__catalog"> -->
+            <a href="catalog.html" class="header__nav-catalog">
+              Каталог товаров
+            </a>
+            <div class="header__catalog-popover">
+              <a class="header__popover-link" href="#"
+                >Виртуальная реальность</a
+              >
+              <a class="header__popover-link" href="#">Фитнес-браслеты</a>
+              <a class="header__popover-link" href="#">Квадрокоптеры</a>
+              <a class="header__popover-link" href="#">Моноподы для cелфи</a>
+              <a class="header__popover-link" href="#">Умные часы</a>
+              <a class="header__popover-link" href="#"></a>
+              <a class="header__popover-link" href="#">Экшн-камеры</a>
+            </div>
+            <!-- </div> -->
             <nav>
               <ul class="header__nav-services">
                 <li>
@@ -175,15 +192,6 @@
               </ul>
             </nav>
           </div>
-        </div>
-        <div class="header__catalog-popover">
-          <a class="header__popover-link" href="#">Виртуальная реальность</a>
-          <a class="header__popover-link" href="#">Фитнес-браслеты</a>
-          <a class="header__popover-link" href="#">Квадрокоптеры</a>
-          <a class="header__popover-link" href="#">Моноподы для cелфи</a>
-          <a class="header__popover-link" href="#">Умные часы</a>
-          <a class="header__popover-link" href="#"></a>
-          <a class="header__popover-link" href="#">Экшн-камеры</a>
         </div>
       </div>
     </header>
@@ -203,6 +211,16 @@
           <h2 class="visually-hidden">Рекламный товар</h2>
           <section class="promo__gallery">
             <h3 class="visually-hidden">Фотография рекламного товара</h3>
+
+            <div class="promo__arrows">
+              <button class="slider-button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-button-right">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+
             <img
               width="560"
               height="560"
@@ -224,33 +242,6 @@
               alt="Селфи-палка."
               class="promo__image"
             />
-            <div class="promo__arrows">
-              <button class="slider-button">
-                <span class="visually-hidden">Предыдущее фото</span>
-                <svg
-                  width="20"
-                  height="60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z"
-                    fill="#000"
-                  />
-                </svg>
-              </button>
-              <button class="slider-button">
-                <span class="visually-hidden">Следующее фото</span>
-                <svg
-                  width="20"
-                  height="60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0h3l17 30L4 60H0l16-30L0 0Z" fill="#000" />
-                </svg>
-              </button>
-            </div>
           </section>
           <section class="promo__advantages">
             <h3 class="visually-hidden">Описание рекламного товара</h3>
@@ -801,6 +792,9 @@
               <label class="modal__field-label" for="delivery-quantity">
                 <span> Количество: </span>
                 <button class="modal__field-label--info">
+                  <span class="visually-hidden"
+                    >Кнопка с всплывающей подсказкой</span
+                  >
                   <span> i </span>
                   <div class="info-popover">
                     <p class="info-popover__content">
