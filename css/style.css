@@ -152,13 +152,6 @@ body {
   position: relative;
 }
 
-.search-form__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 16px;
-}
-
 .search-form__input:focus-within::after {
   content: "";
   position: absolute;
@@ -322,18 +315,19 @@ body {
 
   width: 320px;
   /* color: #ffffff; */
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   display: none;
+}
+
+.cart-popover__items {
+  background-color: #1a1a1a;
 }
 
 .cart-popover::before {
   font-size: 0;
   content: url(../img/triangle.svg);
   width: 14px;
-  z-index: 10;
-}
-
-.cart-popover__items {
+  z-index: 1000;
 }
 
 .cart-popover__container {
@@ -389,10 +383,12 @@ body {
 }
 
 .cart-popover__total {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 13px;
   font-size: 16px;
+  background-color: #1a1a1a;
 }
 
 .cart-popover__total span {
@@ -400,6 +396,7 @@ body {
 }
 
 .cart-popover__open-cart {
+  width: 100%;
   background-color: #000000;
   padding: 20px;
 }
@@ -447,11 +444,11 @@ body {
   position: relative;
 }
 
-.header__catalog {
+/* .header__catalog {
   display: flex;
   width: 471px;
   justify-content: space-between;
-}
+} */
 
 .header__catalog-icon-closed {
   display: block;
@@ -518,6 +515,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main--gray {
+  background-color: #f0f0f0;
 }
 
 /* Промо товар */
@@ -644,7 +645,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  text-transform: uppercase;
   text-align: center;
   min-width: 220px;
   padding: 10px 0;
@@ -652,6 +652,11 @@ body {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.yellow-line__text {
+  text-transform: uppercase;
+  z-index: 10;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -663,7 +668,6 @@ body {
   height: 25%;
   width: 100%;
   background-color: #ffe17f;
-  z-index: -1;
   transition: 0.2s ease-in-out;
 }
 
@@ -909,14 +913,17 @@ body {
 
 .services__button {
   border: none;
-  background-color: transparent;
+  background: none;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: calc(18px * 0.2);
+  cursor: pointer;
+  min-width: 220px;
+  padding: 10px 0;
 }
 
-.services__button--current {
+.yellow-line__text--current {
   color: #ffe17f;
 }
 
@@ -1031,7 +1038,9 @@ body {
   width: 530px;
 }
 
-.about__line {
+.about__info::before {
+  content: "";
+  display: block;
   width: 84px;
   height: 7px;
   background-color: black;
@@ -1071,7 +1080,9 @@ body {
   margin-bottom: 19px;
 }
 
-.about__dot {
+.about__delivery-name::before {
+  content: "";
+  display: block;
   background-color: #ffe17f;
   width: 8px;
   height: 8px;
@@ -1083,6 +1094,8 @@ body {
   font-weight: 700;
   letter-spacing: -1px;
   font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .about__subtitle {
@@ -1136,7 +1149,6 @@ body {
 }
 
 .subscribe__description {
-  width: 560px;
   font-family: "Rubik", sans-serif;
 }
 
@@ -1348,17 +1360,19 @@ body {
   align-items: center;
 }
 
-.footer__links-item {
-  display: flex;
-  align-items: center;
-}
-
-.footer__line {
+.footer__links-list::before {
+  content: "";
+  display: block;
   background-color: #ffc500;
   height: 7px;
   width: 80px;
   margin: 0;
   margin-right: 35px;
+}
+
+.footer__links-item {
+  display: flex;
+  align-items: center;
 }
 
 .footer__socials-list {
@@ -1437,6 +1451,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
+  z-index: 100;
 }
 
 .modal__delivery {
@@ -1671,10 +1686,6 @@ body {
   font-size: 18px;
 }
 
-.yellow-line__decoration--modal {
-  z-index: 0;
-}
-
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
@@ -1708,13 +1719,20 @@ body {
   font-size: 16px;
 }
 
-.main__breadcrumb::after {
+.main__breadcrumb-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__breadcrumb-item::after {
   content: url(../img/arrow.svg);
+  font-size: 0;
   margin-left: 16px;
   margin-right: 16px;
 }
 
-.main__breadcrumb:last-child::after {
+.main__breadcrumb-item:last-child::after {
   content: "";
 }
 
@@ -1810,11 +1828,6 @@ fieldset {
   right: -8px;
 }
 
-.filter__range-inputs {
-  display: flex;
-  justify-content: center;
-}
-
 .filter__label {
   top: 23px;
   left: -50%;
@@ -1823,7 +1836,7 @@ fieldset {
   position: absolute;
   font-family: "Rubik", sans-serif;
   font-size: 15px;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .filter__range-input {
@@ -1834,6 +1847,7 @@ fieldset {
   background-color: transparent;
   border: none;
   appearance: textfield;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .filter__range-input::-webkit-outer-spin-button,
@@ -1879,6 +1893,7 @@ fieldset {
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .filter__item--disabled .filter__control {
@@ -1912,11 +1927,12 @@ fieldset {
   position: absolute;
 }
 
-.filter__control:focus {
-  outline: none;
+.checkbox-hidden {
+  opacity: 0;
+  position: absolute;
 }
 
-.filter__control:focus .filter__control-mark {
+.filter__control-input:focus + .filter__control-mark {
   outline: solid 2px #af4fff;
 }
 
@@ -1934,7 +1950,8 @@ fieldset {
   border: solid 2px #000000;
   border-radius: 50%;
 }
-.filter__control:focus .filter__mark-circle::after {
+
+.filter__control-input:focus + .filter__mark-circle::after {
   outline: solid 2px #af4fff;
   content: "";
   width: 20px;
@@ -1999,7 +2016,7 @@ fieldset {
 }
 
 .catalog__sorting-arrows {
-  width: 60px;
+  width: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2019,10 +2036,14 @@ fieldset {
 }
 
 .catalog__arrow {
-  width: 30px;
+  width: 34px;
+  height: 34px;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 0;
+  cursor: pointer;
+  border: none;
 }
 
 .catalog__arrow:focus {
@@ -2218,7 +2239,7 @@ fieldset {
 
 .cart-popover {
   display: flex;
-  /* display: none; */
+  display: none;
 }
 
 .info-popover {

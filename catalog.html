@@ -23,33 +23,25 @@
             <span class="visually-hidden">Логотип магазина device.</span>
           </a>
           <div class="header__nav-section">
-            <ul class="header__nav-items">
-              <li>
-                <form
-                  action="https://echo.htmlacademy.ru/"
-                  method="post"
-                  class="search-form"
-                >
-                  <div class="search-form__input">
-                    <input
-                      type="search"
-                      id="search-text"
-                      name="search-text"
-                      placeholder="Поиск по сайту"
-                      class="search-form__text"
-                    />
-                  </div>
-                  <div class="search-form__focus">
-                    <button class="search-form__button" type="submit">
-                      Найти
-                    </button>
-                  </div>
-                </form>
-              </li>
-              <li>
-                <a href="#" class="header__nav-link header__login">Войти </a>
-              </li>
-            </ul>
+            <div class="header__nav-items">
+              <form
+                action="https://echo.htmlacademy.ru/"
+                method="post"
+                class="search-form"
+              >
+                <div class="search-form__input">
+                  <input
+                    type="search"
+                    id="search-text"
+                    name="search-text"
+                    placeholder="Поиск по сайту"
+                    class="search-form__text"
+                  />
+                </div>
+                <button class="search-form__button" type="submit">Найти</button>
+              </form>
+              <a href="#" class="header__nav-link header__login">Войти </a>
+            </div>
             <ul class="header__nav-items">
               <li>
                 <a href="#" class="header__nav-link header__compare">
@@ -126,30 +118,30 @@
                         </button>
                       </a>
                     </li>
-
-                    <li class="cart-popover__total">
-                      <div class="cart-popover__quantity">
-                        <span>Товаров:</span>
-                        <span>2</span>
-                      </div>
-                      <div class="cart-popover__price">
-                        <span>Сумма:</span>
-                        <span>2000</span>
-                        <span>₽</span>
-                      </div>
-                    </li>
-                    <li class="cart-popover__open-cart">
-                      <button disabled class="cart-popover__open-button">
-                        Открыть корзину
-                      </button>
-                    </li>
                   </ul>
+
+                  <div class="cart-popover__total">
+                    <div class="cart-popover__quantity">
+                      <span>Товаров:</span>
+                      <span>2</span>
+                    </div>
+                    <div class="cart-popover__price">
+                      <span>Сумма:</span>
+                      <span>2000</span>
+                      <span>₽</span>
+                    </div>
+                  </div>
+
+                  <div class="cart-popover__open-cart">
+                    <button disabled class="cart-popover__open-button">
+                      Открыть корзину
+                    </button>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="header__services">
-            <!-- <div class="header__catalog"> -->
             <a href="catalog.html" class="header__nav-catalog">
               Каталог товаров
             </a>
@@ -164,7 +156,7 @@
               <a class="header__popover-link" href="#"></a>
               <a class="header__popover-link" href="#">Экшн-камеры</a>
             </div>
-            <!-- </div> -->
+            <!-- Нужен ли список? или просто добавляет тегов? -->
             <nav>
               <ul class="header__nav-services">
                 <li>
@@ -191,15 +183,21 @@
       <div class="section">
         <header class="main__header">
           <h1 class="main__title">Моноподы для селфи</h1>
-          <ul class="main__breadcrumbs">
-            <li class="main__breadcrumb">Главная</li>
-            <li class="main__breadcrumb">Каталог товаров</li>
-            <li class="main__breadcrumb">Моноподы для селфи</li>
-          </ul>
+          <u class="main__breadcrumbs">
+            <li class="main__breadcrumb-item">
+              <a class="main__breadcrumb" href="#"> Главная </a>
+            </li>
+            <li class="main__breadcrumb-item">
+              <a class="main__breadcrumb" href="#"> Каталог товаров </a>
+            </li>
+            <li class="main__breadcrumb-item">
+              <a class="main__breadcrumb" href="#"> Моноподы для селфи </a>
+            </li>
+          </u>
         </header>
       </div>
 
-      <div class="main section">
+      <div class="main main--gray section">
         <section class="main__catalog">
           <h2 class="visually-hidden">Список товаров с фильтрами</h2>
           <div class="filter">
@@ -258,10 +256,10 @@
                   <legend class="filter__parameter">Цвет</legend>
                   <ul class="filter__list">
                     <li class="filter__item filter__item--disabled">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="checkbox"
-                          class="filter__control-input visually-hidden"
+                          class="filter__control-input checkbox-hidden"
                           name="black"
                           checked
                           disabled
@@ -271,10 +269,10 @@
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="checkbox"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="white"
                           checked
                         />
@@ -283,10 +281,10 @@
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="checkbox"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="blue"
                         />
                         <span class="filter__control-mark"></span>
@@ -294,10 +292,10 @@
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="checkbox"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="red"
                         />
                         <span class="filter__control-mark"></span>
@@ -305,10 +303,10 @@
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="checkbox"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="pink"
                         />
                         <span class="filter__control-mark"></span>
@@ -324,10 +322,10 @@
                   <legend class="filter__parameter">Bluetooth</legend>
                   <ul class="filter__list">
                     <li class="filter__item filter__item--disabled">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="radio"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="is-bluetooth"
                           value="true"
                           checked
@@ -338,10 +336,10 @@
                       </label>
                     </li>
                     <li class="filter__item">
-                      <label class="filter__control" tabindex="0">
+                      <label class="filter__control">
                         <input
                           type="radio"
-                          class="visually-hidden filter__control-input"
+                          class="filter__control-input checkbox-hidden"
                           name="is-bluetooth"
                           value="false"
                           checked
@@ -353,7 +351,9 @@
                   </ul>
                 </fieldset>
               </div>
-              <button class="yellow-line" type="submit">Показать</button>
+              <button class="yellow-line" type="submit">
+                <span class="yellow-line__text"> Показать </span>
+              </button>
             </form>
           </div>
 
@@ -379,7 +379,7 @@
                   </select>
                 </div>
                 <div class="catalog__sorting-arrows">
-                  <a href="#" class="catalog__arrow">
+                  <button href="#" class="catalog__arrow">
                     <svg
                       width="12"
                       height="10"
@@ -391,8 +391,8 @@
                     >
                       <path d="M6 0L11.5 10H0.5" />
                     </svg>
-                  </a>
-                  <a class="catalog__arrow" href="#">
+                  </button>
+                  <button class="catalog__arrow" href="#">
                     <svg
                       width="12"
                       height="10"
@@ -404,7 +404,7 @@
                     >
                       <path d="M6 0L11.5 10H0.5" />
                     </svg>
-                  </a>
+                  </button>
                 </div>
               </form>
             </div>
@@ -415,7 +415,7 @@
                     <div class="catalog__item-img catalog__new">
                       <div class="catalog__overlay">
                         <button class="yellow-line" type="submit">
-                          Подробнее
+                          <span class="yellow-line__text"> Подробнее </span>
                         </button>
                       </div>
                       <img
@@ -441,7 +441,7 @@
                     <div class="catalog__item-img">
                       <div class="catalog__overlay">
                         <button class="yellow-line" type="submit">
-                          Подробнее
+                          <span class="yellow-line__text"> Подробнее </span>
                         </button>
                       </div>
                       <img
@@ -467,7 +467,7 @@
                     <div class="catalog__item-img catalog__new">
                       <div class="catalog__overlay">
                         <button class="yellow-line" type="submit">
-                          Подробнее
+                          <span class="yellow-line__text"> Подробнее </span>
                         </button>
                       </div>
                       <img
@@ -493,7 +493,7 @@
                     <div class="catalog__item-img">
                       <div class="catalog__overlay">
                         <button class="yellow-line" type="submit">
-                          Подробнее
+                          <span class="yellow-line__text"> Подробнее </span>
                         </button>
                       </div>
                       <img
@@ -544,7 +544,7 @@
                     <a class="pagination__page" href="#">15</a>
                   </li>
                 </ul>
-                <a class="pagination__link pagination__next" href="#">Вперед</a>
+                <a class="pagination__link" href="#">Вперед</a>
               </div>
             </div>
           </div>
@@ -564,102 +564,91 @@
           />
         </a>
 
-        <ul class="footer__info-list">
-          <li class="footer__adress">
+        <div class="footer__info-list">
+          <span class="footer__adress">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
-          </li>
-          <li class="footer__info-item">
-            <ul class="footer__services-list">
-              <li class="footer__services-item">
-                <a class="footer__services-link" href="#">Доставка</a>
-              </li>
-              <li class="footer__services-item">
-                <a class="footer__services-link" href="#">Гарантия</a>
-              </li>
-              <li class="footer__services-item">
-                <a class="footer__services-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer__info-item">
-            <div class="footer__tel-container">
-              <span class="footer__tel">Тел.:</span>
-              <a class="footer__phone" href="tel:88128121212">
-                +7 (812) 812-12-12
-              </a>
-            </div>
-          </li>
-        </ul>
-        <ul class="footer__links-list">
-          <li class="footer__links-item">
-            <div class="footer__line"></div>
-          </li>
-          <li class="footer__links-item">
-            <ul class="footer__socials-list">
-              <li class="footer__socials-li">
-                <a
-                  href="https://wwww.facebook.com/htmlacademy"
-                  class="footer__socials-link"
-                >
-                  <div class="footer__socials-container">
-                    <img
-                      width="9"
-                      height="18"
-                      src="img/socials/nobook.svg"
-                      alt="Логотип фейсбука"
-                    />
-                  </div>
-                </a>
-              </li>
-              <li class="footer__socials-li">
-                <a
-                  href="https://www.instagram.com/htmlacademy"
-                  class="footer__socials-link"
-                >
-                  <div class="footer__socials-container">
-                    <img
-                      width="16"
-                      height="16"
-                      src="img/socials/nogram.svg"
-                      alt="Логотип инстаграм"
-                    />
-                  </div>
-                </a>
-              </li>
-              <li class="footer__socials-li">
-                <a
-                  href="https://twitter.com/htmlacademy_ru"
-                  class="footer__socials-link"
-                >
-                  <div class="footer__socials-container">
-                    <img
-                      width="15"
-                      height="14"
-                      src="img/socials/noX.svg"
-                      alt="Логотип твиттер"
-                    />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="footer__links-item">
-            <a href="#" class="footer__ha-link">
-              <span class="visually-hidden">Логотип HTML academy.</span>
-              <svg
-                class="footer__ha-logo"
-                width="115"
-                height="33"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1a3.7 3.7 0 0 0-3.4-2.1c-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5a3.2 3.2 0 0 1 3.2-2.6ZM98.2 17.9a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
-                />
-              </svg>
+          </span>
+          <ul class="footer__services-list footer__info-item">
+            <li class="footer__services-item">
+              <a class="footer__services-link" href="#">Доставка</a>
+            </li>
+            <li class="footer__services-item">
+              <a class="footer__services-link" href="#">Гарантия</a>
+            </li>
+            <li class="footer__services-item">
+              <a class="footer__services-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="footer__tel-container footer__info-item">
+            <span class="footer__tel">Тел.:</span>
+            <a class="footer__phone" href="tel:88128121212">
+              +7 (812) 812-12-12
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class="footer__links-list">
+          <ul class="footer__socials-list footer__links-item">
+            <li class="footer__socials-li">
+              <a
+                href="https://wwww.facebook.com/htmlacademy"
+                class="footer__socials-link"
+              >
+                <div class="footer__socials-container">
+                  <img
+                    width="9"
+                    height="18"
+                    src="img/socials/nobook.svg"
+                    alt="Логотип фейсбука"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="footer__socials-li">
+              <a
+                href="https://www.instagram.com/htmlacademy"
+                class="footer__socials-link"
+              >
+                <div class="footer__socials-container">
+                  <img
+                    width="16"
+                    height="16"
+                    src="img/socials/nogram.svg"
+                    alt="Логотип инстаграм"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="footer__socials-li">
+              <a
+                href="https://twitter.com/htmlacademy_ru"
+                class="footer__socials-link"
+              >
+                <div class="footer__socials-container">
+                  <img
+                    width="15"
+                    height="14"
+                    src="img/socials/noX.svg"
+                    alt="Логотип твиттер"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <a href="#" class="footer__ha-link footer__links-item">
+            <span class="visually-hidden">Логотип HTML academy.</span>
+            <svg
+              class="footer__ha-logo"
+              width="115"
+              height="33"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1a3.7 3.7 0 0 0-3.4-2.1c-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5a3.2 3.2 0 0 1 3.2-2.6ZM98.2 17.9a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
