@@ -232,6 +232,17 @@ body {
   position: relative;
 }
 
+.search-form__button:focus-within::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #af4fff;
+  border-radius: 0;
+}
+
 .search-form__button:hover {
   color: #ffffff;
   border-color: #000000;
@@ -248,10 +259,6 @@ body {
   color: rgba(255, 255, 255, 0.3);
   border-color: #000000;
   background-color: #000000;
-}
-
-.search-form__focus:focus-within {
-  outline: 2px solid #af4fff;
 }
 
 .header__login-icon {
@@ -311,7 +318,11 @@ body {
   flex-direction: column;
   align-items: center;
   left: -140px;
-  z-index: 10;
+  z-index: 1000;
+
+  width: 320px;
+  /* color: #ffffff; */
+  background-color: #1a1a1a;
   display: none;
 }
 
@@ -323,11 +334,6 @@ body {
 }
 
 .cart-popover__items {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  color: #ffffff;
-  background-color: #1a1a1a;
 }
 
 .cart-popover__container {
@@ -2212,7 +2218,7 @@ fieldset {
 
 .cart-popover {
   display: flex;
-  display: none;
+  /* display: none; */
 }
 
 .info-popover {

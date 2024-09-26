@@ -34,33 +34,25 @@
             <span class="visually-hidden">Логотип магазина device.</span>
           </a>
           <div class="header__nav-section">
-            <ul class="header__nav-items">
-              <li>
-                <form
-                  action="https://echo.htmlacademy.ru/"
-                  method="post"
-                  class="search-form"
-                >
-                  <div class="search-form__input">
-                    <input
-                      type="search"
-                      id="search-text"
-                      name="search-text"
-                      placeholder="Поиск по сайту"
-                      class="search-form__text"
-                    />
-                  </div>
-                  <div class="search-form__focus">
-                    <button class="search-form__button" type="submit">
-                      Найти
-                    </button>
-                  </div>
-                </form>
-              </li>
-              <li>
-                <a href="#" class="header__nav-link header__login">Войти </a>
-              </li>
-            </ul>
+            <div class="header__nav-items">
+              <form
+                action="https://echo.htmlacademy.ru/"
+                method="post"
+                class="search-form"
+              >
+                <div class="search-form__input">
+                  <input
+                    type="search"
+                    id="search-text"
+                    name="search-text"
+                    placeholder="Поиск по сайту"
+                    class="search-form__text"
+                  />
+                </div>
+                <button class="search-form__button" type="submit">Найти</button>
+              </form>
+              <a href="#" class="header__nav-link header__login">Войти </a>
+            </div>
             <ul class="header__nav-items">
               <li>
                 <a href="#" class="header__nav-link header__compare">
@@ -73,7 +65,7 @@
                   <span class="header__cart">Корзина</span>
                 </a>
                 <div class="cart-popover">
-                  <ul class="cart-popover__items">
+                  <ul>
                     <li class="cart-popover__container">
                       <a href="#" class="cart-popover__item">
                         <img
@@ -137,24 +129,24 @@
                         </button>
                       </a>
                     </li>
-
-                    <li class="cart-popover__total">
-                      <div class="cart-popover__quantity">
-                        <span>Товаров:</span>
-                        <span>2</span>
-                      </div>
-                      <div class="cart-popover__price">
-                        <span>Сумма:</span>
-                        <span>2000</span>
-                        <span>₽</span>
-                      </div>
-                    </li>
-                    <li class="cart-popover__open-cart">
-                      <button disabled class="cart-popover__open-button">
-                        Открыть корзину
-                      </button>
-                    </li>
                   </ul>
+
+                  <div class="cart-popover__total">
+                    <div class="cart-popover__quantity">
+                      <span>Товаров:</span>
+                      <span>2</span>
+                    </div>
+                    <div class="cart-popover__price">
+                      <span>Сумма:</span>
+                      <span>2000</span>
+                      <span>₽</span>
+                    </div>
+                  </div>
+                  <div class="cart-popover__open-cart">
+                    <button disabled class="cart-popover__open-button">
+                      Открыть корзину
+                    </button>
+                  </div>
                 </div>
               </li>
             </ul>
