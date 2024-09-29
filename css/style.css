@@ -134,6 +134,7 @@ body {
   align-items: center;
   cursor: pointer;
   z-index: 100;
+  text-transform: uppercase;
 }
 
 .header__nav-catalog:hover:after {
@@ -311,13 +312,13 @@ body {
   z-index: 1000;
 
   width: 320px;
-  /* color: #ffffff; */
-  /* background-color: #1a1a1a; */
   display: none;
 }
 
 .cart-popover__items {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background-color: #b63434;
+  width: 320px;
 }
 
 .cart-popover::before {
@@ -333,10 +334,10 @@ body {
 }
 
 .cart-popover__item {
-  margin: 18px;
-  padding: 2px;
+  /* margin: 18px; */
+  padding: 20px;
   display: flex;
-  height: 63px;
+  height: 100px;
   cursor: default;
   position: relative;
 }
@@ -344,11 +345,14 @@ body {
 .cart-popover__img {
   max-height: 100%;
   margin-right: 23px;
+  overflow: auto;
 }
 
 .cart-popover__item-name {
   color: #ffffff;
   margin-right: 23px;
+  font-size: 16px;
+  width: 150px;
 }
 
 .cart-popover__item:hover .cart-popover__img,
@@ -363,8 +367,8 @@ body {
 
 .cart-popover__close-btn {
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 17px;
+  top: 17px;
   width: 15px;
   height: 15px;
   padding: 0;
@@ -385,7 +389,8 @@ body {
   justify-content: space-between;
   padding: 10px 20px 13px;
   font-size: 16px;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background-color: #b63434;
 }
 
 .cart-popover__total span {
@@ -436,7 +441,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* letter-spacing: 3.6px; */
   letter-spacing: 0.2rem;
   position: relative;
@@ -462,6 +467,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 470px;
+  text-transform: uppercase;
 }
 
 .header__text-right {
@@ -472,19 +478,25 @@ body {
   display: grid;
   width: 1160px;
   padding: 0 60px;
-  margin-top: -18px;
-  grid-template-columns: 222px 222px 222px;
-  gap: 15px;
+  /* margin-top: -18px; */
+  grid-template-columns: 249px 213px 230px;
+  row-gap: 17px;
+  column-gap: 0px;
   background-color: #ffe17f;
-  padding-top: 30px;
-  padding-bottom: 60px;
+  padding-top: 14px;
+  padding-bottom: 57px;
   z-index: 99;
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
   display: none;
   position: absolute;
   left: -60px;
   top: 51px;
+}
+
+.header__popover-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.1px;
 }
 
 .header__nav-catalog:hover + .header__catalog-popover,
@@ -1477,18 +1489,22 @@ body {
   height: 568px;
   border: solid 10px #000000;
   background-color: #ffffff;
-  padding: 57px 70px;
+  padding: 58px 70px;
 }
 
 .modal__section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .modal__section--bottom {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+}
+
+.modal__section--item {
+  margin-bottom: 42px;
 }
 
 .modal__title {
@@ -1534,7 +1550,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   line-height: 26px;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
 }
 
 .modal__field-label--info {
@@ -1547,13 +1563,14 @@ body {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 1px;
 }
 
 .info-popover {
   position: absolute;
   flex-direction: column;
-  top: 27px;
-  left: -20px;
+  top: 30px;
+  left: -19px;
   z-index: 10;
   display: none;
 }
@@ -1568,7 +1585,7 @@ body {
 
 .info-popover__content {
   margin: 0;
-  width: 205px;
+  width: 200px;
   color: #ffffff;
   background-color: #1a1a1a;
   padding: 20px;
@@ -1605,7 +1622,7 @@ body {
 .modal__invalid-message {
   display: none;
   position: absolute;
-  bottom: -17px;
+  bottom: -20px;
   color: #ff3d3d;
   font-family: "Rubik", sans-serif;
   font-size: 14px;
@@ -1623,7 +1640,7 @@ body {
 
 .modal__field:focus:invalid {
   padding: 16px;
-  border: solid 3px #ff3d3d;
+  border: solid 2px #ff3d3d;
 }
 
 .modal__field:disabled {
@@ -1635,7 +1652,7 @@ body {
 }
 
 .modal__group-counter {
-  width: 266px;
+  width: 250px;
 }
 
 .modal__counter {
@@ -1648,6 +1665,7 @@ body {
 .modal__field-counter {
   width: 60px;
   appearance: textfield;
+  text-align: center;
 }
 
 .modal__field-counter::-webkit-outer-spin-button,
@@ -2257,7 +2275,7 @@ fieldset {
 
 .cart-popover {
   display: flex;
-  display: none;
+  /* display: none; */
 }
 
 .info-popover {
