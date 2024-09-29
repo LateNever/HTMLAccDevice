@@ -80,7 +80,7 @@ body {
 /* HEADER */
 
 .header {
-  height: 220px;
+  height: 225px;
   position: relative;
 }
 
@@ -89,7 +89,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 180px;
+  height: 185px;
   background-color: #ffe17f;
   z-index: -1;
 }
@@ -228,7 +228,11 @@ body {
   position: relative;
 }
 
-.search-form__button:focus-within::after {
+.search-form__button:focus-visible {
+  outline: none;
+}
+
+.search-form__button:focus-visible::after {
   content: "";
   position: absolute;
   top: -4px;
@@ -311,14 +315,13 @@ body {
   left: -140px;
   z-index: 1000;
 
-  width: 320px;
+  width: 319px;
   display: none;
 }
 
 .cart-popover__items {
-  /* background-color: #1a1a1a; */
-  background-color: #b63434;
-  width: 320px;
+  background-color: #1a1a1a;
+  width: 100%;
 }
 
 .cart-popover::before {
@@ -337,15 +340,16 @@ body {
   /* margin: 18px; */
   padding: 20px;
   display: flex;
-  height: 100px;
-  cursor: default;
+  /* height: 100px; */
+  /* cursor: default; */
   position: relative;
 }
 
 .cart-popover__img {
-  max-height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: cover;
   margin-right: 23px;
-  overflow: auto;
 }
 
 .cart-popover__item-name {
@@ -387,14 +391,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px 13px;
+  padding: 10px 20px 11px;
   font-size: 16px;
-  /* background-color: #1a1a1a; */
-  background-color: #b63434;
+  background-color: #1a1a1a;
 }
 
 .cart-popover__total span {
   color: #ffffff;
+  font-size: 16px;
 }
 
 .cart-popover__open-cart {
@@ -410,9 +414,9 @@ body {
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: calc(18px * 0.2);
+  letter-spacing: 0.2rem;
   cursor: pointer;
+  padding-left: 3px;
 }
 
 .cart-popover__open-button:hover {
@@ -1733,13 +1737,13 @@ body {
 
 .main__header {
   width: 1079px;
-  margin-top: 37px;
-  margin-left: 42px;
+  margin-top: 31px;
+  margin-left: 39px;
   margin-bottom: 35px;
 }
 
 .main__title {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 50px;
 }
 
@@ -1747,6 +1751,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: "Rubik", sans-serif;
+  margin-bottom: 1px;
 }
 
 .main__breadcrumb {
@@ -1764,7 +1769,7 @@ body {
 .main__breadcrumb-item::after {
   content: url(../img/arrow.svg);
   font-size: 0;
-  margin-left: 16px;
+  margin-left: 18px;
   margin-right: 16px;
 }
 
@@ -1791,7 +1796,7 @@ body {
 
 .main__catalog {
   display: flex;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-left: 60px;
 }
 
@@ -1801,11 +1806,13 @@ body {
 }
 
 .filter__title {
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik", sans-serif; */
+  font-weight: 800;
   font-size: 16px;
   text-transform: uppercase;
-  margin-bottom: 60px;
-  letter-spacing: calc(18px * 0.2);
+  margin-top: 4px;
+  margin-bottom: 58px;
+  letter-spacing: calc(16px * 0.2);
 }
 
 fieldset {
@@ -1817,20 +1824,37 @@ fieldset {
   margin-bottom: 10px;
 }
 
+.filter__group--price {
+  margin-bottom: 7px;
+}
+
+.filter__group--bt {
+  margin-bottom: 9px;
+}
+
 .filter__parameter {
-  padding-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 11px;
+  margin-bottom: 22px;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02rem;
+}
+
+.filter__parameter--price {
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.filter__parameter--bt {
+  margin-bottom: 19px;
 }
 
 .filter__range-scale {
   position: relative;
   height: 2px;
   margin-top: 6px;
-  margin-bottom: 58px;
+  margin-bottom: 57px;
   background-color: #dcdcdc;
 }
 
@@ -1879,7 +1903,7 @@ fieldset {
   width: 50px;
   padding: 0 2px;
   font: inherit;
-  text-align: center;
+  text-align: left;
   background-color: transparent;
   border: none;
   appearance: textfield;
@@ -1901,7 +1925,11 @@ fieldset {
 }
 
 .filter__item {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
+}
+
+.filter__item--bt {
+  margin-bottom: 20px;
 }
 
 .filter__item:hover,
@@ -1939,6 +1967,10 @@ fieldset {
 .filter__control-label {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+}
+
+.yellow-line--show {
+  width: 220px;
 }
 
 .filter__control-mark {
@@ -2025,25 +2057,30 @@ fieldset {
   flex-wrap: wrap;
   width: 100%;
   padding: 0 40px;
-  margin-bottom: 22px;
+  /* margin-top: 3px; */
+  margin-bottom: 20px;
 }
 
 .catalog__sorting-title {
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  /* letter-spacing: 3px; */
+  /* font-family: "Raleway", sans-serif; */
+  margin-top: 5px;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: calc(16px * 0.2);
 }
 
 .catalog__select-container {
+  margin-top: 2px;
   max-width: 500px;
 }
 
 .catalog__select-control {
   border: none;
-  padding-right: 20px;
-  margin-right: 20px;
+  padding-right: 28px;
+  margin-right: 13px;
+  /* margin-top: 5px; */
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -2052,7 +2089,7 @@ fieldset {
 }
 
 .catalog__sorting-arrows {
-  width: 70px;
+  width: 61px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2072,8 +2109,8 @@ fieldset {
 }
 
 .catalog__arrow {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2103,7 +2140,8 @@ fieldset {
 .catalog__products-grid {
   display: grid;
   grid-template-columns: 360px 360px;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 45px;
   background-color: #ffffff;
   margin: 70px 0px 44px;
 }
@@ -2156,14 +2194,16 @@ fieldset {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  margin-top: 26px;
+  margin-top: 27px;
 }
 
 .catalog__card-title {
-  width: 50%;
+  width: 57%;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  letter-spacing: -0.02rem;
+  line-height: 20px;
 }
 
 .catalog__price-value {
@@ -2181,9 +2221,9 @@ fieldset {
   background: none;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: calc(16px * 0.2);
 }
 
 .more-button:hover {
@@ -2211,6 +2251,11 @@ fieldset {
   display: flex;
   align-items: center;
   padding: 25px;
+  font-weight: 800;
+}
+
+.pagination__link--next {
+  padding-right: 22px;
 }
 
 .pagination__link:hover {
@@ -2228,22 +2273,26 @@ fieldset {
   height: 71px;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
-  letter-spacing: calc(18px * 0.2);
   background-color: #ebebeb;
   margin-bottom: 78px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .pagination__numbers {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  /* gap: 1px; */
+  /* justify-content: center; */
   font-family: "Rubik", sans-serif;
 }
 
 .pagination__page {
   color: rgba(68, 68, 68, 0.3);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
 }
 
 .pagination__link--current {
@@ -2259,7 +2308,12 @@ fieldset {
 }
 
 .pagination__item {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .pagination__item:focus {
@@ -2275,7 +2329,7 @@ fieldset {
 
 .cart-popover {
   display: flex;
-  /* display: none; */
+  display: none;
 }
 
 .info-popover {
