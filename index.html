@@ -27,7 +27,7 @@
                 <button class="search-form__button" type="submit">Найти</button>
               </form>
               <a class="header__nav-link header__login" href="#">Войти</a>
-              <a class="header__nav-link header__logout" href="#">Выйти</a>
+              <a class="header__nav-link header__logout header__logout--nologin" href="#">Выйти</a>
             </div>
             <ul class="header__nav-items">
               <li>
@@ -140,14 +140,119 @@
     <!-- MAIN -->
 
     <main class="main">
-      <!-- Промо товар -->
       <div class="container">
+        <!-- Промо товар 1 -->
+        <article class="promo promo--current">
+          <span class="promo__background">01</span>
+          <h2 class="visually-hidden">Рекламный товар</h2>
+          <section class="promo__gallery">
+            <h3 class="visually-hidden">Фотография рекламного товара</h3>
+            <div class="promo__arrows">
+              <button class="slider-button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-button-right">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+            <img class="promo__image" width="560" height="560" src="img/drone.png"
+            alt="Квадрокоптер.">
+          </section>
+          <section class="promo__advantages">
+            <h3 class="visually-hidden">Описание рекламного товара</h3>
+            <h3 class="promo__title">Порхает как бабочка, жалит как пчела!</h3>
+            <p class="promo__description promo__description--current">Этот обычный, на первый взгляд, квадрокоптер
+              оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <div class="promo__navigation">
+              <a class="yellow-line yellow-line--disabled promo__more-button" href="#">
+                <span class="yellow-line__text">Подробнее</span>
+              </a>
+              <ol class="promo__pagination">
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button promo__pagination-button--current" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </li>
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+              </ol>
+            </div>
+            <h3 class="visually-hidden">Особенности товара</h3>
+            <ul class="promo__features">
+              <li class="promo__feature">
+                <b class="promo__feature-title">800 м</b>
+                <span class="promo__feature-description">Дальность полета</span>
+              </li>
+              <li class="promo__feature">
+                <b class="promo__feature-title">50 м</b>
+                <span class="promo__feature-description">Радиус поражения</span>
+              </li>
+            </ul>
+          </section>
+        </article>
+        <!-- Промо товар 2 -->
         <article class="promo">
-          <div class="promo__background">
-            <span class="promo__number promo__number--current">01</span>
-            <span class="promo__number">02</span>
-            <span class="promo__number">03</span>
-          </div>
+          <span class="promo__background">02</span>
+          <h2 class="visually-hidden">Рекламный товар</h2>
+          <section class="promo__gallery">
+            <h3 class="visually-hidden">Фотография рекламного товара</h3>
+            <div class="promo__arrows">
+              <button class="slider-button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-button-right">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+            <img class="promo__image" width="560" height="560" src="img/fitness-bracelet.png" alt="Фитнес браслет." >
+          </section>
+          <section class="promo__advantages">
+            <h3 class="visually-hidden">Описание рекламного товара</h3>
+            <h3 class="promo__title">Худеем правильно!</h3>
+            <p class="promo__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия
+              и соблюдать диету.</p>
+            <div class="promo__navigation">
+              <a class="yellow-line yellow-line--disabled promo__more-button" href="#">
+                <span class="yellow-line__text">Подробнее</span>
+              </a>
+              <ol class="promo__pagination">
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button promo__pagination-button--current" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </li>
+                <li class="promo__pagination-item">
+                  <button class="promo__pagination-button" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+              </ol>
+            </div>
+            <h3 class="visually-hidden">Особенности товара</h3>
+            <ul class="promo__features">
+              <li class="promo__feature">
+                <b class="promo__feature-title">48 часов</b>
+                <span class="promo__feature-description">Без подзарядки</span>
+              </li>
+            </ul>
+          </section>
+        </article>
+        <!-- Промо товар 3 -->
+        <article class="promo">
+          <span class="promo__background">03</span>
           <h2 class="visually-hidden">Рекламный товар</h2>
           <section class="promo__gallery">
             <h3 class="visually-hidden">Фотография рекламного товара</h3>
@@ -160,21 +265,11 @@
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
-
-            <img class="promo__image promo__image--current" width="560" height="560" src="img/drone.png"
-            alt="Квадрокоптер.">
-            <img class="promo__image" width="560" height="560" src="img/fitness-bracelet.png" alt="Фитнес браслет." >
             <img class="promo__image" width="560" height="560" src="img/selfie_stick.png" alt="Селфи-палка." >
           </section>
           <section class="promo__advantages">
             <h3 class="visually-hidden">Описание рекламного товара</h3>
-            <h3 class="promo__title promo__title--current">Порхает как бабочка, жалит как пчела!</h3>
-            <h3 class="promo__title">Худеем правильно!</h3>
             <h3 class="promo__title">Делай селфи, как Бен Стиллер!</h3>
-            <p class="promo__description promo__description--current">Этот обычный, на первый взгляд, квадрокоптер
-              оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <p class="promo__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия
-              и соблюдать диету.</p>
             <p class="promo__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь
               (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <div class="promo__navigation">
@@ -200,22 +295,6 @@
               </ol>
             </div>
             <h3 class="visually-hidden">Особенности товара</h3>
-            <ul class="promo__features promo__features--current">
-              <li class="promo__feature">
-                <b class="promo__feature-title">800 м</b>
-                <span class="promo__feature-description">Дальность полета</span>
-              </li>
-              <li class="promo__feature">
-                <b class="promo__feature-title">50 м</b>
-                <span class="promo__feature-description">Радиус поражения</span>
-              </li>
-            </ul>
-            <ul class="promo__features">
-              <li class="promo__feature">
-                <b class="promo__feature-title">48 часов</b>
-                <span class="promo__feature-description">Без подзарядки</span>
-              </li>
-            </ul>
             <ul class="promo__features">
               <li class="promo__feature">
                 <b class="promo__feature-title">8,5 м</b>
@@ -476,7 +555,7 @@
             </li>
           </ul>
 
-          <a class="footer__ha-link footer__links-item" href="#">
+          <a class="footer__ha-link footer__links-item" href="https://htmlacademy.ru">
             <span class="visually-hidden">Логотип HTML academy.</span>
             <svg class="footer__ha-logo" width="115" height="33" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6

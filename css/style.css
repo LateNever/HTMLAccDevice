@@ -103,14 +103,14 @@ body {
 
 .header__logo {
   margin-top: 17px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   width: 145px;
 }
 
 .header__nav-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .header__nav-items {
@@ -276,7 +276,6 @@ body {
 }
 
 .header__login {
-  max-width: 100px;
   margin-left: 26px;
   overflow-wrap: anywhere;
 }
@@ -285,6 +284,10 @@ body {
   margin-left: 28px;
   margin-right: 20px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.header__logout--nologin {
+  display: none;
 }
 
 .header__login::before {
@@ -547,34 +550,31 @@ body {
 
 .promo__background {
   position: absolute;
-  top: -5px;
+  /* top: -3px; */
   z-index: -2;
-  padding-right: 50px;
+  display: inline;
+  padding-right: 49px;
   width: 100%;
   height: 120px;
-  line-height: 135px;
-  text-align: right;
-  background-color: #ffe17f;
-}
-
-.promo__number {
-  display: none;
   font-family: "Rubik", sans-serif;
   font-size: 180px;
+  line-height: 135px;
   font-weight: 700;
-  text-align: start;
+  text-align: right;
+  background-color: #ffe17f;
   color: #ffffff;
 }
 
-.promo__number--current {
-  display: inline;
-}
-
 .promo {
-  display: flex;
+  position: relative;
+  display: none;
   justify-content: space-between;
   margin-top: -5px;
   margin-bottom: 70px;
+}
+
+.promo--current {
+  display: flex;
 }
 
 .promo__gallery {
@@ -583,13 +583,8 @@ body {
 }
 
 .promo__image {
-  display: none;
   width: 100%;
   margin-top: -30px;
-}
-
-.promo__image--current {
-  display: block;
 }
 
 .promo__arrows {
@@ -628,7 +623,6 @@ body {
 
 .promo__title {
   z-index: -2;
-  display: none;
   margin-top: 91px;
   margin-bottom: 29px;
   font-size: 50px;
@@ -636,20 +630,11 @@ body {
   font-weight: 800;
 }
 
-.promo__title--current {
-  display: inline;
-}
-
 .promo__description {
-  display: none;
   margin-top: 0;
   margin-bottom: 51px;
   font-family: "Rubik", sans-serif;
   line-height: 30px;
-}
-
-.promo__description--current {
-  display: inline;
 }
 
 .promo__navigation {
@@ -770,10 +755,6 @@ body {
 }
 
 .promo__features {
-  display: none;
-}
-
-.promo__features--current {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1743,11 +1724,6 @@ body {
 }
 
 /* КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ КАТАЛОГ */
-
-.CAT__main {
-  z-index: -5;
-  background-color: #f0f0f0;
-}
 
 .main__header {
   width: 1079px;
