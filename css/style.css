@@ -89,7 +89,7 @@ body {
   bottom: 0;
   z-index: -10;
   width: 100%;
-  height: 185px;
+  height: 82.2%;
   content: "";
   background-color: #ffe17f;
 }
@@ -124,6 +124,8 @@ body {
   z-index: 100;
   display: flex;
   align-items: center;
+  max-width: 150px;
+  overflow-wrap: anywhere;
 }
 
 .header__nav-link--active {
@@ -148,6 +150,7 @@ body {
   content: url("../img/catalog.svg");
   opacity: 0.3;
   margin-left: 17px;
+  margin-right: 20px;
 }
 
 .header__nav-catalog:hover::after {
@@ -182,7 +185,7 @@ body {
   border-bottom-left-radius: 50px;
 }
 
-.search-form__input:hover {
+.search-form__text:hover  {
   background-color: #ffc700;
   transition: 0.1s;
   cursor: text;
@@ -191,10 +194,13 @@ body {
 .search-form__text {
   padding-left: 43px;
   width: 100%;
+  height: 100%;
   border: none;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   color: #000000;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   background: none;
   outline: none;
 }
@@ -271,13 +277,8 @@ body {
   background-color: #000000;
 }
 
-.header__login-icon {
-  margin-left: 27px;
-}
-
 .header__login {
   margin-left: 26px;
-  overflow-wrap: anywhere;
 }
 
 .header__logout {
@@ -322,6 +323,11 @@ body {
 
 .header__nav-cart {
   position: relative;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
 }
 
 .header__cart::before {
@@ -1638,8 +1644,7 @@ body {
 }
 
 .modal__field:focus:invalid {
-  padding: 16px;
-  border: solid 2px #ff3d3d;
+  outline: solid 2px #ff3d3d;
 }
 
 .modal__field:disabled {
@@ -1684,6 +1689,7 @@ body {
   cursor: pointer;
 }
 
+.modal__field:hover,
 .modal__counter-button:hover {
   background-color: #dcdcdc;
 }
@@ -2063,6 +2069,7 @@ fieldset {
 }
 
 .catalog__select-control {
+  max-width: 200px;
   margin-right: 13px;
   padding-right: 28px;
   font-family: "Rubik", sans-serif;
@@ -2100,6 +2107,7 @@ fieldset {
   width: 30px;
   height: 30px;
   font-size: 0;
+  background: none;
   border: none;
   cursor: pointer;
 }
@@ -2141,7 +2149,6 @@ fieldset {
   top: 27px;
   right: 27px;
   z-index: 0;
-
   content: url("../img/new.svg");
 }
 
@@ -2266,7 +2273,7 @@ fieldset {
   justify-content: space-between;
   align-items: center;
   width: 760px;
-  height: 71px;
+  min-height: 71px;
   margin-bottom: 78px;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -2275,6 +2282,7 @@ fieldset {
 
 .pagination__numbers {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   font-family: "Rubik", sans-serif;
 }
@@ -2303,8 +2311,9 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
+  padding: 0 10px;
 }
 
 .pagination__item:focus-within {
