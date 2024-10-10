@@ -185,7 +185,7 @@ body {
   border-bottom-left-radius: 50px;
 }
 
-.search-form__text:hover  {
+.search-form__text:hover {
   background-color: #ffc700;
   transition: 0.1s;
   cursor: text;
@@ -1641,6 +1641,7 @@ body {
 .modal__field:focus {
   background-color: #dcdcdc;
   outline: solid 2px #af4fff;
+  z-index: 10;
 }
 
 .modal__field:focus:invalid {
@@ -1700,6 +1701,7 @@ body {
 
 .modal__counter-button:focus {
   outline: solid 2px #af4fff;
+  z-index: 10;
 }
 
 .modal__counter-button:disabled {
@@ -1867,6 +1869,26 @@ fieldset {
   border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 100;
+}
+
+.filter__range-toggle::before {
+  content: "";
+  margin: -2px;
+  /* position: absolute; */
+  /* left: -7px; */
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #f0f0f0;
+  /* border: 2px solid #000000; */
+  /* border-radius: 50%; */
+  /* opacity: 0.2; */
+  /* z-index: ; */
+}
+
+.filter__range-toggle:hover {
+  opacity: 0.5;
 }
 
 .filter__range-toggle:focus {
@@ -2326,9 +2348,9 @@ fieldset {
 
 /* Включение модального окна и поповеров */
 
-.modal {
+/* .modal {
   display: none;
-}
+} */
 
 .cart-popover {
   display: none;
