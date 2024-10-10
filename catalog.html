@@ -4,7 +4,7 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>HTML Academy: Device</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" >
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.svg" >
     <link rel="stylesheet" href="css/style.css" >
   </head>
   <body>
@@ -22,6 +22,7 @@
                 <div class="search-form__input">
                   <input class="search-form__text" type="search" id="search-text" name="search-text"
                   placeholder="Текст поиска" >
+                  <span class="visually-hidden">Поле для поиска по сайту.</span>
                 </div>
                 <button class="search-form__button" type="submit">Найти</button>
               </form>
@@ -45,7 +46,7 @@
                         alt="">
                         <span class="cart-popover__item-name">Любительская селфи-палка</span>
                       </a>
-                      <button class="cart-popover__close-btn">
+                      <button class="cart-popover__close-btn" type="button">
                         <span class="visually-hidden">Кнопка удалить товар.</span>
                         <svg class="cart-popover__close-img" width="26" height="26" viewBox="0 0 26 26" fill="white"
                         xmlns="http://www.w3.org/2000/svg" >
@@ -61,7 +62,7 @@
                         alt="">
                         <span class="cart-popover__item-name">Профессиональная селфи-палка</span>
                       </a>
-                      <button class="cart-popover__close-btn">
+                      <button class="cart-popover__close-btn" type="button">
                         <span class="visually-hidden">Кнопка удалить товар.</span>
                         <svg class="cart-popover__close-img" width="26" height="26" viewBox="0 0 26 26" fill="white"
                         xmlns="http://www.w3.org/2000/svg">
@@ -85,14 +86,14 @@
                   </div>
 
                   <div class="cart-popover__open-cart">
-                    <button class="cart-popover__open-button">Открыть корзину</button>
+                    <button class="cart-popover__open-button" type="button">Открыть корзину</button>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="header__services">
-            <button class="header__nav-catalog">Каталог товаров</button href="catalog.html">
+            <button class="header__nav-catalog" type="button">Каталог товаров</button href="catalog.html">
             <ul class="header__catalog-popover">
               <li>
                 <a class="header__popover-link" href="#">Виртуальная реальность</a>
@@ -168,16 +169,20 @@
                   <legend class="filter__parameter">Стоимость</legend>
                   <div class="filter__range-scale">
                     <div class="filter__range-bar" style="left: 0px; width: 120px">
-                      <button class="filter__range-toggle filter__toggle-min" type="button">
-                        <label class="filter__label">от
-                          <input class="filter__range-input" type="number" name="min-price" value="0"></label>
+                      <div class="filter__toggle-container filter__toggle-min">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="filter__range-toggle filter__toggle-max" type="button">
-                        <label class="filter__label">до
-                          <input class="filter__range-input" type="number" name="max-price" value="5000"></label>
+                        <button class="filter__range-toggle" type="button"></button>
+                        <label class="filter__label">от
+                          <input class="filter__range-input" type="number" name="min-price" value="0">
+                        </label>
+                      </div>
+                      <div class="filter__toggle-container filter__toggle-max">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
+                        <button class="filter__range-toggle" type="button"></button>
+                        <label class="filter__label">до
+                          <input class="filter__range-input" type="number" name="max-price" value="5000">
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </fieldset>
@@ -265,19 +270,19 @@
                   </select>
                 </div>
                 <div class="catalog__sorting-arrows">
-                  <button class="catalog__arrow">
+                  <a class="catalog__arrow" href="#">
                     <svg class="catalog__sorting-arrow" width="12" height="10" viewBox="0 0 12 10" fill="black"
                     xmlns="http://www.w3.org/2000/svg" aria-label="Сортировка по возрастанию">
                       <path d="M6 0L11.5 10H0.5"></path>
                     </svg>
-                  </button>
-                  <button class="catalog__arrow">
+                  </a>
+                  <a class="catalog__arrow" href="#">
                     <svg class="catalog__sorting-arrow catalog__sorting-arrow--down" width="12" height="10"
                     viewBox="0 0 12 10" fill="black" xmlns="http://www.w3.org/2000/svg"
                     aria-label="Сортировка по убыванию">
                       <path d="M6 0L11.5 10H0.5"></path>
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </form>
             </div>
@@ -412,7 +417,7 @@
           </ul>
           <div class="footer__tel-container footer__info-item">
             <span class="footer__tel">Тел.:</span>
-            <a class="footer__phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+            <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </div>
         </div>
         <div class="footer__links-list">
@@ -429,7 +434,7 @@
             </li>
             <li class="footer__socials-li">
               <a class="footer__socials-link" href="https://twitter.com/htmlacademy_ru">
-                  <img width="15" height="14" src="img/socials/noX.svg" alt="Логотип твиттер">
+                  <img width="15" height="14" src="img/socials/nox.svg" alt="Логотип твиттер">
               </a>
             </li>
           </ul>

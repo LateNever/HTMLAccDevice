@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
     <title>HTML Academy: Device</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" >
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.svg" >
     <link rel="stylesheet" href="css/style.css" >
   </head>
   <body>
@@ -23,6 +23,7 @@
                 <div class="search-form__input">
                   <input class="search-form__text" type="search" id="search-text" name="search-text"
                   placeholder="Текст поиска" >
+                  <span class="visually-hidden">Поле для поиска по сайту.</span>
                 </div>
                 <button class="search-form__button" type="submit">Найти</button>
               </form>
@@ -46,7 +47,7 @@
                         alt="">
                         <span class="cart-popover__item-name">Любительская селфи-палка</span>
                       </a>
-                      <button class="cart-popover__close-btn">
+                      <button class="cart-popover__close-btn" type="button">
                         <span class="visually-hidden">Кнопка удалить товар.</span>
                         <svg class="cart-popover__close-img" width="26" height="26" viewBox="0 0 26 26" fill="white"
                         xmlns="http://www.w3.org/2000/svg" >
@@ -62,7 +63,7 @@
                         alt="">
                         <span class="cart-popover__item-name">Профессиональная селфи-палка</span>
                       </a>
-                      <button class="cart-popover__close-btn">
+                      <button class="cart-popover__close-btn" type="button">
                         <span class="visually-hidden">Кнопка удалить товар.</span>
                         <svg class="cart-popover__close-img" width="26" height="26" viewBox="0 0 26 26" fill="white"
                         xmlns="http://www.w3.org/2000/svg">
@@ -86,14 +87,14 @@
                   </div>
 
                   <div class="cart-popover__open-cart">
-                    <button class="cart-popover__open-button">Открыть корзину</button>
+                    <button class="cart-popover__open-button" type="button">Открыть корзину</button>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="header__services">
-            <button class="header__nav-catalog">Каталог товаров</button href="catalog.html">
+            <button class="header__nav-catalog" type="button">Каталог товаров</button href="catalog.html">
             <ul class="header__catalog-popover">
               <li>
                 <a class="header__popover-link" href="#">Виртуальная реальность</a>
@@ -148,10 +149,10 @@
           <section class="promo__gallery">
             <h3 class="visually-hidden">Фотография рекламного товара</h3>
             <div class="promo__arrows">
-              <button class="slider-button">
+              <button class="slider-button" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
-              <button class="slider-button slider-button-right">
+              <button class="slider-button slider-button-right" type="button">
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
@@ -205,14 +206,14 @@
           <section class="promo__gallery">
             <h3 class="visually-hidden">Фотография рекламного товара</h3>
             <div class="promo__arrows">
-              <button class="slider-button">
+              <button class="slider-button" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
-              <button class="slider-button slider-button-right">
+              <button class="slider-button slider-button-right" type="button">
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
-            <img class="promo__image" width="560" height="560" src="img/fitness-bracelet.png" alt="Фитнес браслет." >
+            <img class="promo__image" width="560" height="560" src="img/fitness_bracelet.png" alt="Фитнес браслет." >
           </section>
           <section class="promo__advantages">
             <h3 class="visually-hidden">Описание рекламного товара</h3>
@@ -258,10 +259,10 @@
             <h3 class="visually-hidden">Фотография рекламного товара</h3>
 
             <div class="promo__arrows">
-              <button class="slider-button">
+              <button class="slider-button" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
-              <button class="slider-button slider-button-right">
+              <button class="slider-button slider-button-right" type="button">
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
@@ -533,7 +534,7 @@
           </ul>
           <div class="footer__tel-container footer__info-item">
             <span class="footer__tel">Тел.:</span>
-            <a class="footer__phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+            <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </div>
         </div>
         <div class="footer__links-list">
@@ -550,7 +551,7 @@
             </li>
             <li class="footer__socials-li">
               <a class="footer__socials-link" href="https://twitter.com/htmlacademy_ru">
-                  <img width="15" height="14" src="img/socials/noX.svg" alt="Логотип твиттер">
+                  <img width="15" height="14" src="img/socials/nox.svg" alt="Логотип твиттер">
               </a>
             </li>
           </ul>
@@ -589,7 +590,7 @@
       <div class="modal__delivery">
         <div class="modal__section">
           <h2 class="modal__title">Доставка под заказ</h2>
-          <button class="modal__close-btn">
+          <button class="modal__close-btn" type="button">
             <span class="visually-hidden">Кнопка закрыть</span>
           </button>
         </div>
@@ -616,14 +617,14 @@
             <div class="modal__field-group modal__group-counter">
               <label class="modal__field-label" for="delivery-quantity">
                 <span> Количество: </span>
-                <a class="modal__field-label--info" href="#">
+                <button class="modal__field-label--info" type="button">
                   <span class="visually-hidden">Кнопка с всплывающей подсказкой</span>
                   <span> i </span>
                   <span class="info-popover">
                     <span class="info-popover__content">Постараемся найти, сколько нужно. Привезём сколько получится
                       по требованиям <br> к провозу багажа.</span>
                   </span>
-                </a>
+                </button>
               </label>
 
               <div class="modal__counter">
