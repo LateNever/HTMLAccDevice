@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.svg" >
     <link rel="stylesheet" href="css/style.css" >
   </head>
-  <body>
+  <body class="body">
     <header class="section">
       <div class="header container">
         <div class="header__content">
@@ -34,7 +34,7 @@
                 <a class="header__nav-link header__compare"  href="#">Сравнить</a>
               </li>
               <li class="header__nav-cart">
-                <a class="header__nav-link" href="#">
+                <a class="header__nav-link header__nav-cart-link" href="#">
                   <span class="header__cart-box header__cart-quantity">2</span>
                   <span class="header__cart">Корзина</span>
                 </a>
@@ -165,7 +165,7 @@
             <h3 class="filter__title">Фильтр:</h3>
             <form action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter__group">
-                <fieldset>
+                <fieldset class="filter__fieldset">
                   <legend class="filter__parameter">Стоимость</legend>
                   <div class="filter__range-scale">
                     <div class="filter__range-bar" style="left: 0px; width: 120px">
@@ -189,7 +189,7 @@
               </div>
 
               <div class="filter__group filter__group--price">
-                <fieldset>
+                <fieldset class="filter__fieldset">
                   <legend class="filter__parameter filter__parameter--price">Цвет</legend>
                   <ul class="filter__list">
                     <li class="filter__item">
@@ -232,7 +232,7 @@
               </div>
 
               <div class="filter__group filter__group--bt">
-                <fieldset>
+                <fieldset class="filter__fieldset">
                   <legend class="filter__parameter filter__parameter--bt">Bluetooth</legend>
                   <ul class="filter__list">
                     <li class="filter__item filter__item--bt">
@@ -244,7 +244,7 @@
                     </li>
                     <li class="filter__item">
                       <label class="filter__control">
-                        <input class="filter__control-input checkbox-hidden" type="radio" name="is-bluetooth" value="false" checked>
+                        <input class="filter__control-input checkbox-hidden" type="radio" name="is-bluetooth" value="false">
                         <span class="filter__mark-circle"></span>
                         <span class="filter__control-label">Нет</span>
                       </label>
@@ -397,7 +397,7 @@
 
     <!-- Подвал -->
     <footer class="footer">
-      <div class="footer__container">
+      <div class="footer__container container">
         <a class="footer__logo logo" href="index.html">
           <img width="145" height="37" src="img/device_logo_yellow.svg" alt="Логотип магазина device, желтый">
         </a>
@@ -416,7 +416,7 @@
             </li>
           </ul>
           <div class="footer__tel-container footer__info-item">
-            <span class="footer__tel">Тел.:</span>
+            <span class="footer__tel">Тел.:&nbsp;</span>
             <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </div>
         </div>
@@ -466,5 +466,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>

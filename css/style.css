@@ -28,12 +28,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
   font-size: 18px;
-  color: #000000;
-  text-decoration: none;
-  list-style: none;
 }
 
 img {
@@ -43,14 +41,6 @@ img {
 
 /* ОБЩИЕ СТИЛИ */
 
-:focus {
-  outline: none;
-}
-
-:focus-visible {
-  outline: solid 2px #af4fff;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -59,6 +49,30 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  color: #000000;
+}
+
+body a {
+  color: #000000;
+  text-decoration: none;
+}
+
+body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body button {
+  margin: 0;
+  padding: 0;
+}
+
+body h1,
+body h2,
+body h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -128,6 +142,10 @@ body {
   overflow-wrap: anywhere;
 }
 
+.header__nav-link:focus-visible {
+  outline: solid 2px #af4fff;
+}
+
 .header__nav-link--active {
   border-bottom: solid 2px;
 }
@@ -138,12 +156,17 @@ body {
   display: flex;
   align-items: center;
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.header__nav-catalog:focus-visible {
+  outline: solid 2px #af4fff;
 }
 
 .header__nav-catalog::after {
@@ -154,7 +177,15 @@ body {
 }
 
 .header__nav-catalog:hover::after {
+  opacity: 1;
+}
+
+.header__nav-catalog--opened::after {
   content: url("../img/catalog_opened.svg");
+  opacity: 1;
+}
+
+.header__nav-catalog--opened:hover::after {
   opacity: 1;
 }
 
@@ -325,6 +356,21 @@ body {
   position: relative;
 }
 
+.header__nav-cart-link:focus-visible {
+  outline: none;
+}
+
+.header__nav-cart-link:focus-visible::after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -20px;
+  content: "";
+  border: 2px solid #af4fff;
+  border-radius: 0;
+}
+
 .header__cart {
   display: flex;
   align-items: center;
@@ -342,7 +388,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 319px;
+  width: 320px;
 }
 
 .cart-popover__items {
@@ -367,6 +413,22 @@ body {
   position: relative;
   display: flex;
   padding: 20px;
+}
+
+.cart-popover__item:focus-visible {
+  outline: none;
+}
+
+.cart-popover__item:focus-visible::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  content: "";
+  border: 2px solid #af4fff;
+  border-radius: 0;
+  z-index: 10;
 }
 
 .cart-popover__img {
@@ -413,7 +475,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 20px 11px;
+  padding: 10px 20px 14px;
   font-size: 16px;
   background-color: #1a1a1a;
 }
@@ -430,10 +492,12 @@ body {
 }
 
 .cart-popover__open-button {
+  position: relative;
   width: 100%;
   height: 50px;
   padding-left: 3px;
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   background-color: #ffffff;
@@ -450,8 +514,19 @@ body {
   background-color: #ffe17f;
 }
 
-.cart-popover__open-button:focus {
-  outline: solid 2px #af4fff;
+.cart-popover__open-button:focus-visible {
+  outline: none;
+}
+
+.cart-popover__open-button:focus-visible::after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  content: "";
+  border: 2px solid #af4fff;
+  border-radius: 0;
 }
 
 .cart-popover__open-button:disabled {
@@ -540,6 +615,13 @@ body {
   opacity: 0.3;
 }
 
+.logo:focus-visible,
+.header__popover-link:focus-visible,
+.slider-button:focus-visible,
+.cart-popover__close-btn:focus-visible {
+  outline: solid 2px #af4fff;
+}
+
 /* MAIN */
 
 .main {
@@ -556,7 +638,6 @@ body {
 
 .promo__background {
   position: absolute;
-  /* top: -3px; */
   z-index: -2;
   display: inline;
   padding-right: 49px;
@@ -576,7 +657,7 @@ body {
   display: none;
   justify-content: space-between;
   margin-top: -5px;
-  margin-bottom: 70px;
+  margin-bottom: 67px;
 }
 
 .promo--current {
@@ -671,6 +752,7 @@ body {
   z-index: 10;
   margin-left: 4px;
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -822,6 +904,43 @@ body {
   background-color: #ffe17f;
 }
 
+.categories__vr::before {
+  content: url("../img/product_categories/vr.svg");
+  width: 97px;
+  height: 55px;
+}
+
+.categories__monopode::before {
+  content: url("../img/product_categories/monopods.svg");
+  align-self: end;
+  width: 86px;
+  height: 117px;
+}
+
+.categories__gopros::before {
+  content: url("../img/product_categories/gopros.svg");
+  width: 71px;
+  height: 87px;
+}
+
+.categories__mibands::before {
+  content: url("../img/product_categories/mibands.svg");
+  width: 107px;
+  height: 65px;
+}
+
+.categories__applewatches::before {
+  content: url("../img/product_categories/applewatches.svg");
+  width: 56px;
+  height: 98px;
+}
+
+.categories__drones::before {
+  content: url("../img/product_categories/drones.svg");
+  width: 132px;
+  height: 69px;
+}
+
 .categories__item:active {
   opacity: 0.3;
 }
@@ -841,10 +960,6 @@ body {
   overflow-wrap: break-word;
 }
 
-.categories__monopode {
-  align-self: end;
-}
-
 /* Сопутствующие услуги */
 
 .services {
@@ -852,7 +967,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 143px;
+  margin-bottom: 142px;
 }
 
 .services::before {
@@ -921,7 +1036,6 @@ body {
 
 .services__button {
   width: 160px;
-  padding: 10px 0;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -954,10 +1068,28 @@ body {
 
 .services__title {
   width: 450px;
-  margin-bottom: 4px;
+}
+
+.services__delivery::after {
+  content: url("../img/deliveryman.svg");
+  width: 136px;
+  height: 164px;
+}
+
+.services__guarantee::after {
+  content: url("../img/guarantee.svg");
+  width: 171px;
+  height: 195px;
+}
+
+.services__credit::after {
+  content: url("../img/credit.svg");
+  width: 156px;
+  height: 188px;
 }
 
 .services__advantages-title {
+  margin-top: 15px;
   margin-bottom: 30px;
   font-size: 50px;
 }
@@ -974,9 +1106,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1160px;
   height: 100px;
-  margin-bottom: 69px;
+  margin-bottom: 70px;
   background-color: #f0f0f0;
   cursor: pointer;
   user-select: none;
@@ -989,6 +1120,12 @@ body {
   width: 125px;
   height: 100%;
   background-color: #ffe17f;
+}
+
+.unique__pic::after {
+  content: url("../img/van.svg");
+  width: 47px;
+  height: 31px;
 }
 
 .unique__icon {
@@ -1014,6 +1151,7 @@ body {
 }
 
 .unique__service {
+  margin: 0;
   margin-top: 3px;
   margin-left: 3px;
   font-family: "Raleway", sans-serif;
@@ -1044,7 +1182,6 @@ body {
 .about {
   display: flex;
   justify-content: space-between;
-  width: 1160px;
   margin-bottom: 70px;
 }
 
@@ -1057,20 +1194,21 @@ body {
   display: block;
   width: 84px;
   height: 7px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   background-color: #000000;
 }
 
 .about__title {
   margin-top: 0;
-  margin-bottom: 44px;
+  margin-bottom: 43px;
   font-size: 50px;
   font-weight: 800;
 }
 
 .about__description {
   width: 500px;
-  margin-bottom: 29px;
+  margin: 0;
+  margin-bottom: 30px;
   font-family: "Rubik", sans-serif;
   line-height: 30px;
   color: #444444;
@@ -1085,8 +1223,17 @@ body {
   margin-bottom: 1px;
 }
 
+.about__description--bottom {
+  margin-bottom: 31px;
+}
+
+.about__telephone {
+  text-decoration: underline;
+}
+
 .about__delivery {
-  margin-bottom: 29px;
+  margin-top: -1px;
+  margin-bottom: 28px;
 }
 
 .about__delivery-item {
@@ -1100,7 +1247,8 @@ body {
   display: block;
   width: 8px;
   height: 8px;
-  margin-right: 27px;
+  margin-right: 26px;
+  margin-left: 2px;
   background-color: #ffe17f;
   border-radius: 50%;
 }
@@ -1119,6 +1267,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 24px;
   font-weight: 700;
+  color: #444444;
 }
 
 .about__subtitle--margin-top {
@@ -1152,8 +1301,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 63px;
-  margin-bottom: 144px;
+  margin-top: 65px;
+  margin-bottom: 143px;
   margin-left: 7px;
 }
 
@@ -1166,7 +1315,7 @@ body {
 
 .subscribe__info {
   width: 554px;
-  margin-top: 10px;
+  margin-top: 8px;
   font-family: "Rubik", sans-serif;
   line-height: 30px;
   font-weight: 400;
@@ -1207,7 +1356,7 @@ body {
 
 .subscribe__field:focus {
   background-color: #dcdcdc;
-  outline: solid 2px #af4fff;
+  outline: none;
 }
 
 .subscribe__field--invalid {
@@ -1225,6 +1374,7 @@ body {
   font-size: 18px;
   letter-spacing: calc(18px * 0.2);
   text-transform: uppercase;
+  padding-left: 5px;
   background-color: transparent;
   border: solid 3px #c4c4c4;
   cursor: pointer;
@@ -1262,7 +1412,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: auto;
-  padding: 61px 0;
+  padding: 62px 0;
   background-color: #444444;
 }
 
@@ -1270,7 +1420,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1160px;
 }
 
 .footer__logo {
@@ -1306,7 +1455,7 @@ body {
   flex-wrap: wrap;
   gap: 32px;
   max-width: 600px;
-  margin-right: 69px;
+  margin-right: 72px;
   margin-bottom: 9px;
   font-size: 18px;
   font-weight: 800;
@@ -1322,10 +1471,6 @@ body {
 .footer__services-link {
   color: #ffffff;
   overflow-wrap: break-word;
-}
-
-.footer__phone {
-  text-decoration: underline;
 }
 
 .footer__services-link:hover {
@@ -1370,15 +1515,13 @@ body {
   margin-bottom: 5px;
 }
 
-.footer__tel {
-  margin-right: 9px;
-}
-
 .footer__tel,
 .footer__phone {
   display: inline-block;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+  letter-spacing: 0.2px;
+  text-decoration: underline;
   color: #ffffff;
 }
 
@@ -1406,6 +1549,7 @@ body {
 .footer__socials-list {
   display: flex;
   flex-wrap: wrap;
+  margin-right: 2px;
 }
 
 .footer__socials-link {
@@ -1454,6 +1598,8 @@ body {
 
 .footer__ha-logo {
   fill: #ffc700;
+  margin-right: 1px;
+  margin-bottom: 2px;
 }
 
 .footer__ha-logo:hover {
@@ -1575,7 +1721,7 @@ body {
   outline: none;
 }
 
-.modal__field-label--info:focus::after {
+.modal__field-label--info:focus-visible::after {
   content: "";
   position: absolute;
   top: -4px;
@@ -1777,6 +1923,14 @@ body {
   font-size: 16px;
 }
 
+.main__breadcrumb:focus {
+  outline: none;
+}
+
+.main__breadcrumb:focus-within {
+  outline: solid 2px #af4fff;
+}
+
 .main__breadcrumb-item {
   display: flex;
   justify-content: center;
@@ -1848,8 +2002,13 @@ fieldset {
   margin-bottom: 9px;
 }
 
+.filter__fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 .filter__parameter {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   padding-top: 11px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -1870,7 +2029,7 @@ fieldset {
   position: relative;
   height: 2px;
   margin-top: 6px;
-  margin-bottom: 57px;
+  margin-bottom: 56px;
   background-color: #dcdcdc;
 }
 
@@ -1920,7 +2079,7 @@ fieldset {
 
 .filter__toggle-min {
   top: -8px;
-  left: -8px;
+  left: -9px;
 }
 
 .filter__toggle-max {
@@ -1930,8 +2089,8 @@ fieldset {
 
 .filter__label {
   position: absolute;
-  top: 23px;
-  left: -50%;
+  top: 25px;
+  left: -2px;
   display: flex;
   justify-content: start;
   font-family: "Rubik", sans-serif;
@@ -1969,7 +2128,7 @@ fieldset {
 }
 
 .filter__item--bt {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .filter__item:hover,
@@ -2070,8 +2229,8 @@ fieldset {
 .filter__mark-circle::before {
   content: "";
   display: none;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #000000;
   border-radius: 50%;
 }
@@ -2179,7 +2338,7 @@ fieldset {
   display: grid;
   grid-template-columns: 360px 360px;
   column-gap: 40px;
-  row-gap: 45px;
+  row-gap: 44px;
   margin: 70px 0 44px;
   background-color: #ffffff;
 }
@@ -2237,7 +2396,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-top: 31px;
+  margin-top: 32px;
 }
 
 .catalog__card-title {
@@ -2259,6 +2418,7 @@ fieldset {
   width: 100%;
   height: 55px;
   margin-bottom: 44px;
+  padding-left: 3px;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 800;

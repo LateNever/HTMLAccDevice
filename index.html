@@ -35,7 +35,7 @@
                 <a class="header__nav-link header__compare"  href="#">Сравнить</a>
               </li>
               <li class="header__nav-cart">
-                <a class="header__nav-link" href="#">
+                <a class="header__nav-link header__nav-cart-link" href="#">
                   <span class="header__cart-box header__cart-quantity">2</span>
                   <span class="header__cart">Корзина</span>
                 </a>
@@ -94,7 +94,7 @@
             </ul>
           </div>
           <div class="header__services">
-            <button class="header__nav-catalog" type="button">Каталог товаров</button href="catalog.html">
+            <button class="header__nav-catalog" type="button">Каталог товаров</button>
             <ul class="header__catalog-popover">
               <li>
                 <a class="header__popover-link" href="#">Виртуальная реальность</a>
@@ -315,55 +315,42 @@
       </div>
 
       <!-- Категории товаров -->
-      <section class="categories">
+      <section class="container">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img width="97" height="55" src="img/product_categories/vr.svg" alt="">
-              </div>
+              <div class="categories__img categories__vr"></div>
               <span class="categories__name"> Виртуальная реальность </span>
             </a>
           </li>
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img class="categories__monopode" width="86" height="117" src="img/product_categories/monopods.svg"
-                alt="">
-              </div>
+              <div class="categories__img categories__monopode"></div>
               <span class="categories__name">Моноподы <br>для селфи</span>
             </a>
           </li>
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img width="71" height="87" src="img/product_categories/gopros.svg" alt="">
-              </div>
+              <div class="categories__img categories__gopros"></div>
               <span class="categories__name">Экшн-камеры</span>
             </a>
           </li>
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img width="107" height="65" src="img/product_categories/mibands.svg" alt="">
-              </div>
+              <div class="categories__img categories__mibands"></div>
               <span class="categories__name">Фитнес-браслеты</span>
             </a>
           </li>
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img width="56" height="98" src="img/product_categories/applewatches.svg" alt="">
-              </div>
+              <div class="categories__img categories__applewatches"></div>
               <span class="categories__name">Умные часы</span>
             </a>
           </li>
           <li>
             <a class="categories__item" href="#">
-              <div class="categories__img">
-                <img width="132" height="69" src="img/product_categories/drones.svg" alt="">
-              </div>
+              <div class="categories__img categories__drones"></div>
               <span class="categories__name">Квадрокоптеры</span>
             </a>
           </li>
@@ -372,7 +359,7 @@
 
       <!-- Сопутствующие услуги -->
 
-      <section class="services">
+      <section class="services container">
         <div class="services__section container">
           <h2 class="visually-hidden">Дополнительные услуги</h2>
           <ol class="services__pagination">
@@ -394,30 +381,27 @@
               </button>
             </li>
           </ol>
-          <div class="services__content services__content--current">
+          <div class="services__content services__delivery services__content--current">
             <div class="services__title">
               <h3 class="services__advantages-title">Доставка</h3>
               <p class="services__advantages-description"> Мы с удовольствием доставим ваш товар прямо<br>к вашему
                 подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
-            <img width="136" height="164" src="img/deliveryman.svg" alt="Доставщик с посылкой.">
           </div>
-          <div class="services__content">
+          <div class="services__content services__guarantee">
             <div class="services__title">
               <h3 class="services__advantages-title">Гарантия</h3>
               <p class="services__advantages-description">Если из-за возгорания купленного у нас товара у вас сгорит
                 дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
               </p>
             </div>
-            <img width="171" height="195" src="img/guarantee.svg" alt="Телефонная с разговором о ремонте">
           </div>
-          <div class="services__content">
+          <div class="services__content services__credit">
             <div class="services__title">
               <h3 class="services__advantages-title">Кредит</h3>
               <p class="services__advantages-description">Залезть в долговую яму стало проще! Кредитные консультанты
                 подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </div>
-            <img width="156" height="188" src="img/credit.svg" alt="Человек несет большую кредитную карту">
           </div>
         </div>
       </section>
@@ -425,20 +409,8 @@
       <!-- Уникальная доп услуга -->
 
       <section>
-        <a  class="unique" href="#">
-          <div class="unique__pic">
-            <span class="visually-hidden">Движущийся фургон.</span>
-            <svg width="47" height="31" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-              <path d="m46.7 15.4-6.5-8.2c-.3-.4-.7-.6-1.2-.6h-8.3V1.5C30.7.7 30 0 29.2 0H1.5C.7 0 0 .7 0 1.5S.7 3 1.5
-              3h26.2v21.7H15.8a4.7 4.7 0 0 0-4.5-3.3 4.9 4.9 0 0 0-4.8 4.8c0 2.6 2.2 4.8 4.8 4.8 2.1 0 3.9-1.4
-              4.5-3.3h13.4c.8 0 1.5-.7 1.5-1.5V9.6h7.6l5.7 7.3v7.9h-2.2a4.7 4.7 0 0 0-4.5-3.3 4.9 4.9 0 0 0-4.8 4.8c0
-              2.6 2.1 4.8 4.8 4.8 2.1 0 3.9-1.4 4.5-3.3h3.7c.8 0 1.5-.7 1.5-1.5v-9.9c0-.4-.1-.7-.3-1ZM11.3 28c-1
-              0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 1.8Zm26.1 0c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8
-              1.8.8 1.8 1.8-.9 1.8-1.8 1.8Z"></path>
-              <path d="M19.4 9.6c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5H4.8c-.8 0-1.5.7-1.5 1.5S4 9.6 4.8 9.6h14.6ZM17.7
-              14.7c0-.8-.7-1.5-1.5-1.5H1.5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h14.7c.8 0 1.5-.7 1.5-1.5Z"></path>
-            </svg>
-          </div>
+        <a  class="unique container" href="#">
+          <div class="unique__pic"></div>
           <h3 class="unique__service">Доставим редкий товар под заказ</h3>
           <div class="unique__icon">
             <b class="unique__i unique__icon-circle">i</b>
@@ -448,7 +420,7 @@
 
       <!-- О нас, контакты -->
 
-      <section class="about">
+      <section class="about container">
         <div class="about__info">
           <h2 class="visually-hidden">Информация о магазине</h2>
           <h3 class="about__title">О нас</h3>
@@ -473,12 +445,12 @@
         </div>
         <div class="about__info">
           <h3 class="about__title">Контакты</h3>
-          <p class="about__description">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
+          <p class="about__description about__description--bottom">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
             работоспособность покупки.</p>
           <b class="about__subtitle">Интернет-магазин «Девайс»</b>
           <p class="about__description about__description--nomargin">Санкт-Петербург, набережная реки Карповки, 5,
             литера П.</p>
-          <a class="about__description" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a class="about__description about__telephone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <b class="about__subtitle about__subtitle--margin-top">Время работы</b>
           <ul class="about__schedule">
             <li class="about__description about__description--nomargin">пн—пт: с 10:00 до 22:00</li>
@@ -490,7 +462,7 @@
 
       <!-- Подпишись -->
 
-      <section class="subscribe">
+      <section class="subscribe container">
         <h2 class="visually-hidden">Форма для подписки на e-mail рассылку</h2>
         <div class="subscribe__container">
           <div class="subscribe__item">
@@ -501,7 +473,7 @@
           <div class="subscribe__form">
             <form class="subscribe__email" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="newsletter-email">Email</label>
-              <input class="subscribe__field subscribe__field--invalid" type="email" id="newsletter-email"
+              <input class="subscribe__field" type="email" id="newsletter-email"
               name="newsletter-email" placeholder="Ваш e-mail" required>
               <button class="subscribe__button" type="submit">Подписаться</button>
             </form>
@@ -514,7 +486,7 @@
     <!-- Подвал -->
 
     <footer class="footer">
-      <div class="footer__container">
+      <div class="footer__container container">
         <a class="footer__logo logo" href="index.html">
           <img width="145" height="37" src="img/device_logo_yellow.svg" alt="Логотип магазина device, желтый">
         </a>
@@ -533,7 +505,7 @@
             </li>
           </ul>
           <div class="footer__tel-container footer__info-item">
-            <span class="footer__tel">Тел.:</span>
+            <span class="footer__tel">Тел.:&nbsp;</span>
             <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </div>
         </div>
@@ -617,7 +589,7 @@
             <div class="modal__field-group modal__group-counter">
               <label class="modal__field-label" for="delivery-quantity">
                 <span> Количество: </span>
-                <button class="modal__field-label--info" type="button">
+                <button class="modal__field-label--info" type="button" id="delivery-quantity">
                   <span class="visually-hidden">Кнопка с всплывающей подсказкой</span>
                   <span> i </span>
                   <span class="info-popover">
@@ -631,8 +603,8 @@
                 <span class="visually-hidden">Количество товаров в корзине</span>
                 <button class="modal__counter-button" type="button">−</button>
 
-                <input class="modal__field modal__field-counter" type="number" id="delivery-quantity"
-                name="delivery-quantity" value="1" placeholder="0" >
+                <input class="modal__field modal__field-counter" type="number" id="cart-quantity"
+                name="cart-quantity" value="1" placeholder="0" >
 
                 <button class="modal__counter-button" type="button">+</button>
               </div>
